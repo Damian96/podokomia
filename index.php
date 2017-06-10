@@ -1,16 +1,19 @@
 <?php
     require_once('includes/scripts/functions.php');
-    clearPrevCookies();
+    require_once('includes/scripts/language.php');
 
-    $contentFile = getActionFile(dirname(__FILE__));
+    Functions::clearPrevCookies();
+    $cookieLanguage = new CookieLanguage();
 
+    $contentFile = Functions::getActionFile(dirname(__FILE__));
     define('FILE', $contentFile);
     define('ACTION', basename($contentFile, '.php'));
 
-    include 'includes/scripts/language.php';
+    $action = basename($contentFile, '.php');
+    $title = Functions::getTitle($cookieLanguage->value, $action);
+    define('TITLE', $title);
 
-    defined('TITLE') or define('TITLE', 'Podokomia');
-    $basePath = 'includes/internalization/' . constant('COOKIE') . '/';
+    $basePath = 'includes/internalization/' . $cookieLanguage->value . '/';
 ?>
 <!DOCTYPE html>
 <?php require_once($basePath . "head.php"); ?>
@@ -23,8 +26,8 @@
         ?>
     </main>
     <?php require_once($basePath . "footer.php"); ?>
-    <script src="includes/js/change-lang.min.js"></script>
-    <script src="includes/js/slideshow.min.js"></script>
-    <script src="includes/js/onLoad.min.js"></script>
+    <script src="includes/js/change-lang.js"></script>
+    <script src="includes/js/slideshow.js"></script>
+    <script src="includes/js/onLoad.js"></script>
 </body>
 </html>
