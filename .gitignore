@@ -1,4 +1,5 @@
 ./robots.txt
 ./sitemap.xml
+./maintanance-files
 
 !.gitignore
