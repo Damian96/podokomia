@@ -28,6 +28,6 @@
 	<link rel="stylesheet" href="css/podokomia-icons.css?<?=$cssversion?>" />
     <link rel='stylesheet' href="css/open-sans.css?<?=$cssversion?>" />
 	<style type="text/css">[langtype="el"],[langtype="en"]{display:none}#main-menu li{min-height:37px}img:not(.l-img):not(#slide-img){filter:blur(5px);-webkit-filter:blur(5px)}</style>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="includes/js/twitter-widj.js"></script>
 </head>
