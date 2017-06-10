@@ -2,7 +2,7 @@
 class Functions {
     public static function getTitle($lang, $act) {
         if($lang == 'en') {
-            return ucfirst($act) . ' - Podokomia';
+            return ucfirst($act) . ' - Cattle Hoof Trimming';
         } else {
             switch($act) {
                 case 'homepage':
