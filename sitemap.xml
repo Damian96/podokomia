@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>http://www.podokomia.eu/index.php</loc>
+		<lastmod>2017-19-03</lastmod>
+	</url>
+	<url>
+		<loc>http://www.podokomia.eu/services.php</loc>
+		<lastmod>2017-19-03</lastmod>
+	</url>
+	<url>
+		<loc>http://www.podokomia.eu/articles.php</loc>
+		<lastmod>2017-19-03</lastmod>
+	</url>
+	<url>
+		<loc>http://www.podokomia.eu/contact.php</loc>
+		<lastmod>2017-19-03</lastmod>
+	</url>
+</urlset>
