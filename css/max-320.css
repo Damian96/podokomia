@@ -1,1 +1,50 @@
-#wrapper{padding:0;margin:0}#lang{text-align:center}.scol50{width:100%;display:block}#currimg{width:250px;margin:auto}#main-menu{margin:20px 0 0}nav ul li{width:100%;display:block;text-align:center}.welcome{text-align:center;margin:auto}#menu{display:none;visibility:hidden;width:0;height:0}#desc{text-align:center;margin-right:20px}.scol25{width:100%;display:block}
+#wrapper {
+    padding: 0;
+    margin: 0
+}
+
+#lang {
+    text-align: center
+}
+
+.scol50 {
+    width: 100%;
+    display: block
+}
+
+#currimg {
+    width: 250px;
+    margin: auto
+}
+
+#main-menu {
+    margin: 20px 0 0
+}
+
+nav ul li {
+    width: 100%;
+    display: block;
+    text-align: center
+}
+
+.welcome {
+    text-align: center;
+    margin: auto
+}
+
+#menu {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0
+}
+
+#desc {
+    text-align: center;
+    margin-right: 20px
+}
+
+.scol25 {
+    width: 100%;
+    display: block
+}

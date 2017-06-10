@@ -1,19 +1,16 @@
-﻿<?php
+<?php
 	$cssversion = "3.5.0.0";
 ?>
-<!Doctype html>
-<html lang="el">
+<html lang="en">
 <head>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <title>Podokomia.eu</title>
+    <title><?=$title?> - Cattle Hoof Triming</title>
     <script>!function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-74692550-9","auto"),ga("send","pageview");</script>
-    <meta name="description" content="Βασίλης Ζαφειράκης κτηνίατρος  παραγωγικών ζώων, νύχια / εξονυχισμό αγελάδων, Θεσσαλονίκη. κτηνιατρος μεγαλων και παραγωγικων ζωων θεσσαλονικη"/>
     <meta charset="utf-8"/>
     <meta name="robots" content="index,follow,noodp"/>
     <meta name="googlebot" content="index,follow"/>
     <meta name="google" content="translate" />
 	<meta http-equiv="Cache-control" content="public">
-    <meta name="keywords" content="νύχια αγελάδων, κτηνίατρος, κτηνίατρος μεγάλων ζώων, κτηνίατρος παραγωγικών ζώων, εξονυχισμός αγελάδων, nyxia ageladwn, kthniatros, kthniatros megalwn zwwn, exonyxismos ageladwn"/>
     <meta name="viewport" content="width=device-width,  initial-scale=1"/>
     <meta name="geo.placename" content="&Theta;&epsilon;&sigma;&sigma;&alpha;&lambda;&omicron;&nu;ί&kappa;&eta;" />
     <meta name="geo.position" content="40.62;22.96" />
@@ -27,7 +24,11 @@
     <link rel="stylesheet" href="css/slideshow.css?<?=$cssversion?>" />
 	<link rel="stylesheet" href="css/podokomia-icons.css?<?=$cssversion?>" />
     <link rel='stylesheet' href="css/open-sans.css?<?=$cssversion?>" />
-	<style type="text/css">[langtype="el"],[langtype="en"]{display:none}#main-menu li{min-height:37px}img:not(.l-img):not(#slide-img){filter:blur(5px);-webkit-filter:blur(5px)}</style>
+	<style type="text/css">
+	[langtype="el"],[langtype="en"]{display:none}
+	#main-menu li{min-height:37px}
+	img:not(.l-img):not(#slide-img){filter:blur(5px);-webkit-filter:blur(5px)}
+	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="includes/js/twitter-widj.js"></script>
+    <script src="js/twitter-widj.js"></script>
 </head>

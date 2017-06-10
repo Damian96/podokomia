@@ -1,1 +1,277 @@
-body{margin:0;padding:0;font-family:'Open Sans',sans-serif;background-color:#193354;max-height:1000px;overflow-x:hidden}ul,li{padding:0;margin:0}a{text-decoration:none;color:#fff}.scol30,.mcol30,.lcol30,.scol70,.mcol70,.lcol70{box-sizing:border-box;margin-right:-10px}#wrapper{background-color:#fff;border:hidden;margin:0 auto;position:relative;padding:30px}#clues{text-align:center}#banner:last-child{text-align:center}#banner #info span[class^="icon"]{margin-right:5px}span.icon-mobile{font-size:1.3em}#main-menu{width:100%;position:relative;margin-right:18px}.home-li{margin-left:.6%}.col50{width:47%;display:inline-block;height:244px;vertical-align:top}nav ul li{width:24.5%;display:inline-block;list-style-type:none;line-height:37px;float:left;border:solid 1px;background-color:#aacc14}nav ul li:hover{background-color:#a6aaad}nav ul{padding:0;margin:0}nav ul li a{display:block}.menu{width:14%;display:inline-block;vertical-align:middle;margin:30px auto;color:#fff}.menu ul li{background-color:#aacc14;border:solid 1px;width:100px;color:#000;list-style:none;text-align:center}.menu ul li i{margin-left:5px;cursor:context-menu}.menu>ul:first-child{margin-right:1px}#footer{font-size:.8em;color:#fff;border-style:hidden;border-radius:1.5em}.col25{width:24%;display:inline-block;vertical-align:middle}#main,#main-contact{margin:20px 0 0;padding:200px 0}#main-contact{text-align:center}.scol30,.mcol30,.lcol30,.scol70,.mcol70,.lcol70{height:100%}div.timeline-widget>a.u-floatLeft{display:none}#services{position:relative;top:-60px;margin-top:100px;margin-left:10px}.service-img{border:1px solid #000}.service-img:not(#service-4){width:175px;height:125px}#services ul li{margin-left:20px}#services img{margin-top:50px}#articles p{color:blue;text-decoration:underline}#articles{padding-top:100px;padding-left:50px}#articles span[class^="icon"]{font-size:1.2em;color:#c50002}#articles a[href^="downloads/"]{display:inline-block;margin-left:5px}#social-media-btns{text-align:center;padding-bottom:6%;width:100%;display:block}.twitter-follow-button{margin-left:20px;display:inline-block}#social-media-btns span.icon-thumbs-o-up{font-size:1.1em;color:darkblue}#social-media-btns a>span{color:black}#home-img{display:block;margin-bottom:50px}#lang{width:100%;height:19px}#lang a{float:right}.l-img{width:30px;height:15px;cursor:pointer}.welcome{margin-bottom:30px}.desc{margin-bottom:40px}#name{margin-top:0;margin-bottom:0}.prof{margin-top:0;font-size:.9em}#email{margin-top:0;font-size:1.2em}#phone{margin-top:0;padding-bottom:12px;font-size:1.2em}.medialink{margin-right:50px}#info i{margin-right:5px}#main-contact span[class^="icon"]{margin:0 5px}#sitemap{text-decoration:underline}#articles-1{transform:scale(0.5,0.5)}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #193354;
+    max-height: 1000px;
+    overflow-x: hidden
+}
+
+ul, li {
+    padding: 0;
+    margin: 0
+}
+
+a {
+    text-decoration: none;
+    color: #fff
+}
+
+.scol30, .mcol30, .lcol30, .scol70, .mcol70, .lcol70 {
+    box-sizing: border-box;
+    margin-right: -10px
+}
+
+#wrapper {
+    background-color: #fff;
+    border: hidden;
+    margin: 0 auto;
+    position: relative;
+    padding: 30px
+}
+
+#clues {
+    text-align: center
+}
+
+#banner:last-child {
+    text-align: center
+}
+
+#banner #info span[class^="icon"] {
+    margin-right: 5px
+}
+
+span.icon-mobile {
+    font-size: 1.3em
+}
+
+#main-menu {
+    width: 100%;
+    position: relative;
+    margin-right: 18px
+}
+
+.home-li {
+    margin-left: .6%
+}
+
+.col50 {
+    width: 47%;
+    display: inline-block;
+    height: 244px;
+    vertical-align: top
+}
+
+nav ul li {
+    width: 24.5%;
+    display: inline-block;
+    list-style-type: none;
+    line-height: 37px;
+    float: left;
+    border: solid 1px;
+    background-color: #aacc14
+}
+
+nav ul li:hover {
+    background-color: #a6aaad
+}
+
+nav ul {
+    padding: 0;
+    margin: 0
+}
+
+nav ul li a {
+    display: block
+}
+
+.menu {
+    width: 14%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 30px auto;
+    color: #fff
+}
+
+.menu ul li {
+    background-color: #aacc14;
+    border: solid 1px;
+    width: 100px;
+    color: #000;
+    list-style: none;
+    text-align: center
+}
+
+.menu ul li i {
+    margin-left: 5px;
+    cursor: context-menu
+}
+
+.menu>ul:first-child {
+    margin-right: 1px
+}
+
+#footer {
+    font-size: .8em;
+    color: #fff;
+    border-style: hidden;
+    border-radius: 1.5em
+}
+
+.col25 {
+    width: 24%;
+    display: inline-block;
+    vertical-align: middle
+}
+
+#main, #main-contact {
+    margin: 20px 0 0;
+    padding: 200px 0
+}
+
+#main-contact {
+    text-align: center
+}
+
+.scol30, .mcol30, .lcol30, .scol70, .mcol70, .lcol70 {
+    height: 100%
+}
+
+div.timeline-widget>a.u-floatLeft {
+    display: none
+}
+
+#services {
+    position: relative;
+    top: -60px;
+    margin-top: 100px;
+    margin-left: 10px
+}
+
+.service-img {
+    border: 1px solid #000
+}
+
+.service-img:not(#service-4) {
+    width: 175px;
+    height: 125px
+}
+
+#services ul li {
+    margin-left: 20px
+}
+
+#services img {
+    margin-top: 50px
+}
+
+#articles p {
+    color: blue;
+    text-decoration: underline
+}
+
+#articles {
+    padding-top: 100px;
+    padding-left: 50px
+}
+
+#articles span[class^="icon"] {
+    font-size: 1.2em;
+    color: #c50002
+}
+
+#articles a[href^="downloads/"] {
+    display: inline-block;
+    margin-left: 5px
+}
+
+#social-media-btns {
+    text-align: center;
+    padding-bottom: 6%;
+    width: 100%;
+    display: block
+}
+
+.twitter-follow-button {
+    margin-left: 20px;
+    display: inline-block
+}
+
+#social-media-btns span.icon-thumbs-o-up {
+    font-size: 1.1em;
+    color: darkblue
+}
+
+#social-media-btns a>span {
+    color: black
+}
+
+#home-img {
+    display: block;
+    margin-bottom: 50px
+}
+
+#lang {
+    width: 100%;
+    height: 19px
+}
+
+#lang a {
+    float: right
+}
+
+.l-img {
+    width: 30px;
+    height: 15px;
+    cursor: pointer
+}
+
+.welcome {
+    margin-bottom: 30px
+}
+
+.desc {
+    margin-bottom: 40px
+}
+
+#name {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.prof {
+    margin-top: 0;
+    font-size: .9em
+}
+
+#email {
+    margin-top: 0;
+    font-size: 1.2em
+}
+
+#phone {
+    margin-top: 0;
+    padding-bottom: 12px;
+    font-size: 1.2em
+}
+
+.medialink {
+    margin-right: 50px
+}
+
+#info i {
+    margin-right: 5px
+}
+
+#main-contact span[class^="icon"] {
+    margin: 0 5px
+}
+
+#sitemap {
+    text-decoration: underline
+}
+
+#articles-1 {
+    transform: scale(0.5, 0.5)
+}
