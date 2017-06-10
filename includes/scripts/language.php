@@ -11,6 +11,7 @@
         $cookieValue = $_COOKIE['pd_lang'];
     }
 
+    define('COOKIE', $cookieValue);
     $action = basename(getActionFile(constant('FILE')), '.php');
     $title = getTitle($cookieValue, $action);
     define('TITLE', $title)

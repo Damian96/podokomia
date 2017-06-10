@@ -10,7 +10,7 @@
     include 'includes/scripts/language.php';
 
     defined('TITLE') or define('TITLE', 'Podokomia');
-    $basePath = 'includes/internalization/' . $_COOKIE['pd_lang'] . '/';
+    $basePath = 'includes/internalization/' . constant('COOKIE') . '/';
 ?>
 <!DOCTYPE html>
 <?php require_once($basePath . "head.php"); ?>

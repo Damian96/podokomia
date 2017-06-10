@@ -31,5 +31,5 @@
 	img:not(.l-img):not(#slide-img){filter:blur(5px);-webkit-filter:blur(5px)}
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/twitter-widj.js"></script>
+    <script src="includes/js/twitter-widj.js"></script>
 </head>

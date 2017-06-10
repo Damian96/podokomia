@@ -24,13 +24,13 @@
     <link rel="stylesheet" media="(min-width : 768px)" href="css/min-768.min.css?<?=$cssversion?>" />
     <link rel="stylesheet" media="(min-width : 1440px)" href="css/min-1440.min.css?<?=$cssversion?>" />
     <link rel="stylesheet" href="css/slideshow.min.css?<?=$cssversion?>" />
-	<link rel="stylesheet" href="css/podokomia-icons.min.css?<?=$cssversion?>" />
-    <link rel='stylesheet' href="css/open-sans.min.css?<?=$cssversion?>" />
+	<link rel="stylesheet" href="css/podokomia-icons.css?<?=$cssversion?>" />
+    <link rel='stylesheet' href="css/open-sans.css?<?=$cssversion?>" />
 	<style type="text/css">
 	[langtype="el"],[langtype="en"]{display:none}
 	#main-menu li{min-height:37px}
 	img:not(.l-img):not(#slide-img){filter:blur(5px);-webkit-filter:blur(5px)}
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/twitter-widj.js"></script>
+    <script src="includes/js/twitter-widj.js"></script>
 </head>
