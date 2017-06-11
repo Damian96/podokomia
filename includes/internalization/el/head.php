@@ -1,7 +1,6 @@
 <?php
 	$cssversion = "3.5.0.0";
 ?>
-<html lang="el">
 <head>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title><?=constant('TITLE')?></title>

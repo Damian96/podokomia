@@ -17,8 +17,10 @@ class CookieLanguage {
             define('COOKIE', $this->value);
         } else {
             $this->value = $_GET['pd_lang'];
+            $filteredUrl = Functions::getUrlCurrently(['pd_lang']);
             setcookie('pd_lang', $this->value, time() + 86400 * 5);
             define('COOKIE', $this->value);
+            header('location:' . $filteredUrl);
         }
     }
 }

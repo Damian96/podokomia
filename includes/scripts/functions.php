@@ -43,6 +43,37 @@ class Functions {
         if(isset($_COOKIE['pref_lang'])) {
             unset($_COOKIE['pref_lang']);
         }
+        if(isset($_COOKIE['prefLang'])) {
+            unset($_COOKIE['prefLang']);
+        }
+    }
+
+    function getUrlCurrently($filter = array()) {
+        $pageURL = isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on" ? "https://" : "http://";
+
+        $pageURL .= $_SERVER["SERVER_NAME"];
+
+        if ($_SERVER["SERVER_PORT"] != "80") {
+            $pageURL .= ":".$_SERVER["SERVER_PORT"];
+        }
+
+        $pageURL .= $_SERVER["REQUEST_URI"];
+
+
+        if (strlen($_SERVER["QUERY_STRING"]) > 0) {
+            $pageURL = rtrim(substr($pageURL, 0, -strlen($_SERVER["QUERY_STRING"])), '?');
+        }
+
+        $query = $_GET;
+        foreach ($filter as $key) {
+            unset($query[$key]);
+        }
+
+        if (sizeof($query) > 0) {
+            $pageURL .= '?' . http_build_query($query);
+        }
+
+        return $pageURL;
     }
 }
 ?>

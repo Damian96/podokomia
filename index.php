@@ -16,6 +16,7 @@
     $basePath = 'includes/internalization/' . $cookieLanguage->value . '/';
 ?>
 <!DOCTYPE html>
+<html lang="<?=$cookieLanguage->value?>">
 <?php require_once($basePath . "head.php"); ?>
 <body>
 	<?php require_once($basePath . "header.php"); ?>
