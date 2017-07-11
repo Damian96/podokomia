@@ -10,15 +10,6 @@ header {
     height: 136px
 }
 
-#currimg {
-    width: 300px;
-    height: 100px
-}
-
-#main {
-    padding-bottom: 100px
-}
-
 #menu {
     display: block;
     visibility: visible;
@@ -42,10 +33,6 @@ header {
 .mmcol70 {
     width: 85%;
     display: inline-block
-}
-
-#home-img {
-    width: 40%
 }
 
 .mcol50 {

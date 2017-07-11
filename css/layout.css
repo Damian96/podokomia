@@ -1,24 +1,14 @@
 body {
     padding: 0;
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
     background-color: #193354 !important;
     max-height: 1000px;
     overflow-x: hidden
 }
 
-ul, li {
-    padding: 0;
-    margin: 0
-}
-
 a {
     text-decoration: none;
     color: #ffffff;
-}
-
-.scol30, .mcol30, .lcol30, .scol70, .mcol70, .lcol70 {
-    box-sizing: border-box;
-    margin-right: -10px
 }
 
 #wrapper {
@@ -32,6 +22,10 @@ a {
 
 #clues {
     text-align: center
+}
+
+#banner {
+	margin-bottom: 2.5%;
 }
 
 #banner:last-child {
@@ -81,22 +75,25 @@ span.icon-mobile {
 }
 
 #main-menu > .col-lg-3 {
-    padding: 0;
     margin: 0;
+	padding: 0;
     height: 100%;
     background-color: #aacc14;
     text-align: center;
     border-color: #000000;
     border-style: solid;
-    padding: 5px;
 }
 
 #main-menu > .col-lg-3:hover {
     background-color: #a6aaad;
 }
 
-#main-menu > .col-lg-4 a {
-    display: block
+#main-menu a {
+	display: block;
+	color: #ffffff;
+	height: 100%;
+	padding: 5px 0;
+	font-size: 19px;
 }
 
 .menu {
@@ -138,6 +135,33 @@ span.icon-mobile {
     vertical-align: middle
 }
 
+main {
+	padding: 0 !important;
+}
+
+main.homepage {
+	padding: 25px;
+}
+
+aside {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+mmain > *:nth-child(2) {
+	padding-top: 15px;
+	min-height: 400px;
+	padding-bottom: 15px;
+}
+
+#content {
+	font-size: 17px;
+}
+
+#content .section {
+	margin-bottom: 10px;
+}
+
 #main-contact {
     text-align: center
 }
@@ -155,23 +179,6 @@ div.timeline-widget>a.u-floatLeft {
     top: -60px;
     margin-top: 100px;
     margin-left: 10px
-}
-
-.service-img {
-    border: 1px solid #000
-}
-
-.service-img:not(#service-4) {
-    width: 175px;
-    height: 125px
-}
-
-#services ul li {
-    margin-left: 20px
-}
-
-#services img {
-    margin-top: 50px
 }
 
 #articles p {
@@ -194,30 +201,11 @@ div.timeline-widget>a.u-floatLeft {
     margin-left: 5px
 }
 
-#social-media-btns {
-    text-align: center;
-    padding-bottom: 6%;
-    width: 100%;
-    display: block
-}
-
-.twitter-follow-button {
-    margin-left: 20px;
-    display: inline-block
-}
-
-#social-media-btns span.icon-thumbs-o-up {
-    font-size: 1.1em;
-    color: darkblue
-}
-
-#social-media-btns a>span {
-    color: black
-}
-
 #home-img {
     display: block;
-    margin-bottom: 50px
+    margin-bottom: 50px;
+	width: 185px;
+	height: 100px;
 }
 
 #lang-control {
@@ -230,17 +218,9 @@ div.timeline-widget>a.u-floatLeft {
 }
 
 .l-img {
-    width: 30px;
-    height: 15px;
+    width: 32px;
+	height: 16px;
     cursor: pointer
-}
-
-.welcome {
-    margin-bottom: 30px
-}
-
-.desc {
-    margin-bottom: 40px
 }
 
 #name {
