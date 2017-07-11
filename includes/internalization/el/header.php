@@ -1,11 +1,11 @@
 <div id="fb-root"></div>
-	<div id="wrapper">
-		<header id="header">
-			<section id="lang">
+	<div id="wrapper" class="col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
+        <div id="lang-control">
 				<img alt="gr-flag" class="l-img" src="images/gr.ico"/>
 				<img alt="uk-flag" class="l-img" src="images/uk.ico"/>
-			</section>
-			<section id="banner">
+        </div>
+		<header class="col-sm-12 col-md-12 col-lg-12">
+			<div id="banner">
 				<div class="col50">
 					<div id="clues">
                         <h2 class="name">Βασίλης Ζαφειράκης</h2>
@@ -20,20 +20,24 @@
                     </div>
 
                     <div id="slideshow">
-						<img class="slide-img" src="images/slideshow-1.jpg"/>
-						<img class="slide-img" src="images/slideshow-2.jpg"/>
-						<img class="slide-img" src="images/slideshow-3.jpg"/>
+                        <!--<img class="slide-img" src="images/slideshow-1.jpg"/>
+                        <img class="slide-img" src="images/slideshow-2.jpg"/>
+                        <img class="slide-img" src="images/slideshow-3.jpg"/>!-->
                     </div>
 				</div>
-			</section>
+			</div>
 		</header>
-		<section id="main-menu">
-			<nav>
-				<ul>
-                    <li class="home-li"><a href="index.php?action=index" title="Αρχική"><span>Αρχική</span></a></li>
-					<li><a href="index.php?action=services" title="Υπηρεσίες"><span>Υπηρεσίες</span></a></li>
-					<li><a href="index.php?action=articles" title="Άρθρα"><span>Άρθρα</span></a></li>
-					<li><a href="index.php?action=contact" title="Επικοινωνία"><span>Επικοινωνία</span></a></li>
-				</ul>
-			</nav>
-		</section>
+		<div id="main-menu" class="col-sm-12 col-md-12 col-lg-12">
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <a href="index.php?action=index" title="Αρχική"><span>Αρχική</span></a>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <a href="index.php?action=services" title="Υπηρεσίες"><span>Υπηρεσίες</span></a>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <a href="index.php?action=articles" title="Άρθρα"><span>Άρθρα</span></a>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <a href="index.php?action=contact" title="Επικοινωνία"><span>Επικοινωνία</span></a>
+                </div>
+		</div>

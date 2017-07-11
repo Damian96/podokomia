@@ -1,4 +1,4 @@
-#slideshow,
+/*#slideshow,
 .slide-img {
     width: 400px;
     height: 150px
@@ -79,4 +79,16 @@ img {
     #slideshow>img {
         margin: 0 0 0 40%
     }
+}*/
+
+#slideshow {
+    height: 50%;
+}
+
+.slide-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: scale(0.7, 0.7);
+    opacity: 0;
 }
