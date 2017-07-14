@@ -13,8 +13,8 @@ $(window).on('load', function() {
     container = $('#slideshow');
     var code = '';
     $.each(srcs, function(index, item) {
-        code += "\n<img class='slide-img' src='" + srcs[index] + "'/>\n";
-    });
+        code += "\n<img class='slide-img' src='" + item + "'/>\n";
+	});
     container.html(code);
 
     slideImgs = $('.slide-img');
@@ -29,6 +29,8 @@ $(window).on('load', function() {
             $(this).css('top', -heightSum + 'px');
         }
     });
+	container.height(container.prev().height());
+	$('header > div:nth-child(2)').height($('header > div:first-child').height());
     lastImg = slideImgs.length - 1;
     
     setInterval(function() {

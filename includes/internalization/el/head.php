@@ -1,6 +1,6 @@
 <?php
 	$cssversion = "3.5.1.0";
-	$script = isset($_GET['action']) && !empty($_GET['action']) ? $_GET['action'] : 'homepage';
+	$script = (isset($_GET['action']) && !empty($_GET['action']) && ($_GET['action'] !== 'index')) ? $_GET['action'] : 'homepage';
 ?>
 <head>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />

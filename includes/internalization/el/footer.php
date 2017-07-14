@@ -1,14 +1,11 @@
-</div>
-<footer id="footer">
-	<center>
-		<div class="scol30 mcol30 lcol30">
-			Powered by: Damianos Giankakis
+	<footer>
+		<div id="developer-link" class="col-sm-12 col-md-4 col-lg-4">
+			Powered by: <a href="http://dgiankakis.it-studies.gr">Damianos Giankakis</a>
 		</div>
-		<div class="scol30 mcol30 lcol30">
+		<div class="col-sm-12 col-md-4 col-lg-4">
 			www.podokomia.eu
 		</div>
-		<div class="scol30 mcol30 lcol30">
+		<div class="col-sm-12 col-md-4 col-lg-4">
 			 +306986798497
 		</div>
-	</center>
-</footer>
+	</footer>
