@@ -1,6 +1,6 @@
 		<div id="lang-control">
-			<img alt="gr-flag" class="l-img" src="images/gr.jpg"/>
-			<img alt="uk-flag" class="l-img" src="images/uk.png"/>
+			<a href="index.php?action=<?=$action?>&pd_lang=el"><img alt="gr-flag" class="l-img" src="images/gr.jpg"/></a>
+			<a href="index.php?action=<?=$action?>&pd_lang=en"><img alt="uk-flag" class="l-img" src="images/uk.png"/></a>
 		</div>
 		<header class="col-sm-12 col-md-12 col-lg-12">
 			<div class="col-sm-12 col-md-6 col-lg-6">

@@ -136,11 +136,12 @@ footer > div {
 
 #lang-control {
     width: 100%;
-    height: 19px
+    height: 19px;
+	text-align: right;
 }
 
 #lang-control a {
-    float: right
+	display: inline-block;
 }
 
 .l-img {
