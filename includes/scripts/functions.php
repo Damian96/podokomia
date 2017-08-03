@@ -31,7 +31,16 @@ class Functions {
     public static function getActionFile($baseP) {
         $action = 'homepage';
         if(isset($_GET['action']) && !empty($_GET['action'])) {
-            $action = strtolower($_GET['action']);
+			if(($_GET['action'] === 'αρχική') || ($_GET['action'] === 'homepage') || ($_GET['action'] === 'index')) {
+				$action = 'homepage';
+			} else if(($_GET['action'] === 'υπηρεσίες') || ($_GET['action'] === 'services')) {
+				$action = 'services';
+			} else if(($_GET['action'] === 'άρθρα') || ($_GET['action'] === 'articles')) {
+				$action = 'articles';
+			} else if(($_GET['action'] === 'επικοινωνία') || ($_GET['action'] === 'contact')) {
+				$action = 'contact';
+			}
+            $action = strtolower($action);
         }
         return self::searchContentFile($baseP, $action);
     }

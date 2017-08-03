@@ -6,11 +6,13 @@
     position: relative;
     top: 0;
     left: 0;
+    -webkit-transform: scale(0.7, 0.7);
     transform: scale(0.7, 0.7);
     opacity: 0;
 }
 
 .slide-img {
+	-ms-user-select: none;
 	user-select: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;

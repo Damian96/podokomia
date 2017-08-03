@@ -8,9 +8,9 @@
     $contentFile = Functions::getActionFile(dirname(__FILE__));
     define('FILE', $contentFile);
     define('ACTION', basename($contentFile, '.php'));
-	
+
     $action = basename($contentFile, '.php');
-	$action = $action === 'homepage' ? 'index' : $action;
+	$action = ($action === 'homepage') ? 'index' : $action;
     $title = Functions::getTitle($cookieLanguage->value, $action);
     define('TITLE', $title);
 

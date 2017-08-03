@@ -1,6 +1,5 @@
 <?php
 	$cssversion = "3.5.1.0";
-	$script = (isset($_GET['action']) && !empty($_GET['action']) && ($_GET['action'] !== 'index')) ? $_GET['action'] : 'homepage';
 ?>
 <head>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -21,7 +20,7 @@
 	<meta name="google-site-verification" content="JVBFzUZhTGBX1Xfb4mIoYLrYg9cJskVOMv41S97pF8M" />
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="css/layout.css?<?=$cssversion?>" />
-	<link rel="stylesheet" href="css/<?=$script?>.css" />
+	<link rel="stylesheet" href="css/<?=constant('ACTION')?>.css" />
     <link rel="stylesheet" href="css/layout.css?<?=$cssversion?>" />
     <link rel="stylesheet" media="(min-width : 320px)" href="css/min-320.css?<?=$cssversion?>" />
     <link rel="stylesheet" media="(min-width : 480px)" href="css/min-480.css?<?=$cssversion?>" />
