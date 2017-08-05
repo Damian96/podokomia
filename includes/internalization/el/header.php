@@ -6,15 +6,15 @@
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-6">
 				<div id="clues">
-					<h2 class="name">Βασίλης Ζαφειράκης</h2>
-					<p class="prof">Κτηνίατρος Α.Π.Θ.</p>
+					<h2 id="name">Βασίλης Ζαφειράκης</h2>
+					<p id="prof">Κτηνίατρος Α.Π.Θ.</p>
 					<img alt="veterinarian-logo" id="logo" src="images/logo.jpg" alt="vent logo"/>
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-6 text-center">
 				<div id="info">
 					<p id="email"><span class="icon-paper-plane"></span>vas.zafeirakis@gmail.com</p>
-					<p class="phone"><span class="icon-mobile"></span>6986798497</p>
+					<p id="phone"><span class="icon-mobile"></span>6986798497</p>
 				</div>
 				<div id="slideshow">slideshow</div>
 			</div>
