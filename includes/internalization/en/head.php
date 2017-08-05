@@ -1,6 +1,3 @@
-<?php
-	$cssversion = "3.5.0.0";
-?>
 <head>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title><?=$title?></title>
@@ -15,15 +12,15 @@
     <meta name="geo.position" content="40.62;22.96" />
     <meta name="ICBM" content="40.62, 22.96" />
 	<meta name="google-site-verification" content="JVBFzUZhTGBX1Xfb4mIoYLrYg9cJskVOMv41S97pF8M" />
-    <link rel="stylesheet" href="css/layout.css?<?=$cssversion?>" />
+    <link rel="stylesheet" href="css/layout.css" />
 	<link rel="stylesheet" href="css/<?=constant('ACTION')?>.css" />
-    <link rel="stylesheet" media="(min-width : 320px)" href="css/min-320.css?<?=$cssversion?>" />
-    <link rel="stylesheet" media="(min-width : 480px)" href="css/min-480.css?<?=$cssversion?>" />
-    <link rel="stylesheet" media="(min-width : 768px)" href="css/min-768.css?<?=$cssversion?>" />
-    <link rel="stylesheet" media="(min-width : 1440px)" href="css/min-1440.css?<?=$cssversion?>" />
-    <link rel="stylesheet" href="css/slideshow.css?<?=$cssversion?>" />
-	<link rel="stylesheet" href="css/podokomia-icons.css?<?=$cssversion?>" />
-    <link rel='stylesheet' href="css/open-sans.css?<?=$cssversion?>" />
+    <link rel="stylesheet" media="(min-width : 320px)" href="css/min-320.css" />
+    <link rel="stylesheet" media="(min-width : 480px)" href="css/min-480.css" />
+    <link rel="stylesheet" media="(min-width : 768px)" href="css/min-768.css" />
+    <link rel="stylesheet" media="(min-width : 1440px)" href="css/min-1440.css" />
+    <link rel="stylesheet" href="css/slideshow.css" />
+	<link rel="stylesheet" href="css/podokomia-icons.css" />
+    <link rel='stylesheet' href="css/open-sans.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>

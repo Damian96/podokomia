@@ -1,4 +1,13 @@
 		<header class="col-sm-12 col-md-12 col-lg-12">
+			<div id="lang-control">
+				<?php if(LANG === 'el') { ?>
+				<a href="index.php?action=<?=REVERSE_ACTION?>"><img alt="uk-flag" class="l-img" src="images/uk.png"/></a>
+				<a href="index.php?action=<?=ACTION?>"><img alt="gr-flag" class="l-img" src="images/gr.jpg"/></a>
+				<?php } else { ?>
+				<a href="index.php?action=<?=ACTION?>"><img alt="uk-flag" class="l-img" src="images/uk.png"/></a>
+				<a href="index.php?action=<?=REVERSE_ACTION?>"><img alt="gr-flag" class="l-img" src="images/gr.jpg"/></a>
+				<?php } ?>
+			</div>
 			<div class="col-sm-12 col-md-6 col-lg-6">
 				<div id="clues">
 					<h2 class="name">Βασίλης Ζαφειράκης</h2>

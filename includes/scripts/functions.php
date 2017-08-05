@@ -1,5 +1,31 @@
 <?php
 class Functions {
+	public static function getReverseAction($lang, $name) {
+		if($lang === 'el') {
+			if($name === 'αρχική') {
+				return 'homepage';
+			} else if($name === 'υπηρεσίες') {
+				return 'services';
+			} else if($name === 'άρθρα') {
+				return 'articles';
+			} else if($name === 'επικοινωνία') {
+				return 'contact';
+			}
+		} else if($lang === 'en') {
+			if($name === 'homepage') {
+				return 'αρχική';
+			} else if($name === 'services') {
+				return 'υπηρεσίες';
+			} else if($name === 'articles') {
+				return 'άρθρα';
+			} else if($name === 'contact') {
+				return 'επικοινωνία';
+			}
+		} else {
+			return 'αρχική';
+		}
+	}
+	
     public static function getTitle($lang, $act) {
         if($lang == 'en') {
             return ucfirst($act) . ' - Cattle Hoof Trimming';
@@ -45,14 +71,15 @@ class Functions {
         return self::searchContentFile($baseP, $action);
     }
 	
-	public static function getLanguage() {
+	public static function getLanguage($action) {
 		$language = 'el';
-		if(isset($_GET['action']) && !empty($_GET['action']) && ($temp = $_GET['action'])) {
-			if(($temp === 'αρχική') || ($temp === 'υπηρεσίες') || ($temp === 'άρθρα') || ($temp === 'επικοινωνία')) {
-				$language = 'el';
-			} else if(($temp === 'index') || ($temp === 'homepage') || ($temp === 'services') || ($temp === 'articles') || ($temp === 'contact')) {
-				$language = 'en';
-			}
+		if(empty($action)) {
+			return $language;
+		}
+		if(($action === 'αρχική') || ($action === 'υπηρεσίες') || ($action === 'άρθρα') || ($action === 'επικοινωνία')) {
+			$language = 'el';
+		} else if(($action === 'index') || ($action === 'homepage') || ($action === 'services') || ($action === 'articles') || ($action === 'contact')) {
+			$language = 'en';
 		}
 		return $language;
 	}
