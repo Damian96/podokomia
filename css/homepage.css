@@ -1,0 +1,17 @@
+main.homepage {
+	padding: 25px;
+}
+
+#home-desc {
+	font-size: 17px;
+	padding: 10px 0;
+	text-align: justify;
+	text-align-last: center;
+}
+
+#home-img {
+    display: block;
+   	margin: 10px 0;
+	width: 185px;
+	height: 100px;
+}

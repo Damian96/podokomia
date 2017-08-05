@@ -1,7 +1,8 @@
 function onReady() {
-    setTimeout(function() {
-        $("img").css("filter", "blur(0px)");
-        $("img").css("-webkit-filter", "blur(0px)");
-    }, 1e3)
+	setTimeout(function() {
+		var contentHt = $('aside').next().height();
+		$('main').css('min-height', '1200px');
+		$('aside').height(contentHt).find('iframe').css({ width: '100%' });
+	}, 1000);
 }
 $(document).ready(onReady());

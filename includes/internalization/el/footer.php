@@ -1,21 +1,11 @@
-<div id="social-media-btns">
-    <a class="twitter-follow-button" href="https://twitter.com/podokomia"></a>
-    <a href="https://www.facebook.com/Ποδοκομία-Αγελάδων-Cattle-Hoof-Trimming-259849580829877/" target="_blank">
-        <span class="icon-thumbs-o-up"></span>
-        <span>Κάντε μας like στο facebook</span>
-    </a>
-</div>
-</div>
-<footer id="footer">
-<center>
-    <div class="scol30 mcol30 lcol30">
-        Powered by: Damianos Giankakis
-    </div>
-    <div class="scol30 mcol30 lcol30">
-        www.podokomia.eu
-    </div>
-    <div class="scol30 mcol30 lcol30">
-         +306986798497
-    </div>
-</center>
-</footer>
+	<footer>
+		<div id="developer-link" class="col-sm-12 col-md-4 col-lg-4">
+			Powered by: <a href="http://dgiankakis.it-studies.gr">Damianos Giankakis</a>
+		</div>
+		<div class="col-sm-12 col-md-4 col-lg-4">
+			www.podokomia.eu
+		</div>
+		<div class="col-sm-12 col-md-4 col-lg-4">
+			 +306986798497
+		</div>
+	</footer>
