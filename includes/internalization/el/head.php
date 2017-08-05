@@ -12,7 +12,7 @@
     <meta name="google" content="translate" />
 	<meta http-equiv="Cache-control" content="public">
     <meta name="keywords" content="νύχια αγελάδων, κτηνίατρος, κτηνίατρος μεγάλων ζώων, κτηνίατρος παραγωγικών ζώων, εξονυχισμός αγελάδων, nyxia ageladwn, kthniatros, kthniatros megalwn zwwn, exonyxismos ageladwn"/>
-    <meta name="viewport" content="width=device-width,  initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="geo.placename" content="&Theta;&epsilon;&sigma;&sigma;&alpha;&lambda;&omicron;&nu;ί&kappa;&eta;" />
     <meta name="geo.position" content="40.62;22.96" />
     <meta name="ICBM" content="40.62, 22.96" />
@@ -20,13 +20,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="css/layout.css" />
 	<link rel="stylesheet" href="css/<?=constant('ACTION')?>.css" />
-    <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" media="(min-width : 320px)" href="css/min-320.css" />
     <link rel="stylesheet" media="(min-width : 480px)" href="css/min-480.css" />
     <link rel="stylesheet" media="(min-width : 768px)" href="css/min-768.css" />
     <link rel="stylesheet" media="(min-width : 1440px)" href="css/min-1440.css" />
-    <link rel="stylesheet" href="css/slideshow.css" />
 	<link rel="stylesheet" href="css/podokomia-icons.css" />
+	<link rel="stylesheet" href="css/slideshow.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>

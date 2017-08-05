@@ -47,7 +47,6 @@
 	</div>
 <?php require_once($basePath . "footer.php"); ?>
 	
-	<script src="includes/js/change-lang.js"></script>
 	<script src="includes/js/slideshow.js"></script>
 	<script src="includes/js/onLoad.js"></script>
 </body>

@@ -1,5 +1,20 @@
 <?php
 class Functions {
+	public static function getTitle($lang, $action) {
+		$suffix = ($lang === 'el') ? ' - Ποδοκομία Αγελάδων' : ' - Cattle Hoof Trimming';
+		if($action === 'homepage') {
+			return (($lang === 'el') ? 'Αρχική' : 'Homepage') . $suffix;
+		} else if($action === 'services') {
+			return (($lang === 'el') ? 'Υπηρεσίες' : 'Services') . $suffix;
+		} else if($action === 'articles') {
+			return (($lang === 'el') ? 'Άρθρα' : 'Articles') . $suffix;
+		} else if($action === 'contact') {
+			return (($lang === 'el') ? 'Επικοινωνία' : 'Contact') . $suffix;
+		} else {
+			return $suffix;
+		}
+	}
+	
 	public static function getLanguageLinks($name) {
 		if(($name === 'υπηρεσίες') || ($name === 'services')) {
 			return [
@@ -23,25 +38,6 @@ class Functions {
 			];
 		}
 	}
-	
-    public static function getTitle($lang, $act) {
-        if($lang == 'en') {
-            return ucfirst($act) . ' - Cattle Hoof Trimming';
-        } else {
-            switch($act) {
-                case 'homepage':
-                    return 'Αρχική Σελίδα - Podokomia';
-                case 'services':
-                    return 'Υπηρεσίες - Podokomia';
-                case 'articles':
-                    return 'Άρθρα';
-                case 'contact':
-                    return 'Επικοινωνία - Podokomia';
-                default:
-                    return 'Podokomia';
-            }
-        }
-    }
 
     public static function searchContentFile($base, $name) {
         $filename = glob($base . '/includes/internalization/el/' . $name . '.php');
@@ -54,18 +50,19 @@ class Functions {
 
     public static function getActionFile($baseP) {
         $action = 'homepage';
-        if(isset($_GET['action']) && !empty($_GET['action'])) {
-			if(($_GET['action'] === 'αρχική') || ($_GET['action'] === 'homepage') || ($_GET['action'] === 'index')) {
-				$action = 'homepage';
-			} else if(($_GET['action'] === 'υπηρεσίες') || ($_GET['action'] === 'services')) {
-				$action = 'services';
-			} else if(($_GET['action'] === 'άρθρα') || ($_GET['action'] === 'articles')) {
-				$action = 'articles';
-			} else if(($_GET['action'] === 'επικοινωνία') || ($_GET['action'] === 'contact')) {
-				$action = 'contact';
-			}
-            $action = strtolower($action);
-        }
+		if(!isset($_GET) || !isset($_GET['action']) || empty($_GET['action'])) {
+			return 'homepage.php';
+		}
+		if(($_GET['action'] === 'αρχική') || ($_GET['action'] === 'homepage') || ($_GET['action'] === 'index')) {
+			$action = 'homepage';
+		} else if(($_GET['action'] === 'υπηρεσίες') || ($_GET['action'] === 'services')) {
+			$action = 'services';
+		} else if(($_GET['action'] === 'άρθρα') || ($_GET['action'] === 'articles')) {
+			$action = 'articles';
+		} else if(($_GET['action'] === 'επικοινωνία') || ($_GET['action'] === 'contact')) {
+			$action = 'contact';
+		}
+		$action = strtolower($action);
         return self::searchContentFile($baseP, $action);
     }
 	

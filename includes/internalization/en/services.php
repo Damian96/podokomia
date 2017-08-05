@@ -2,6 +2,7 @@
 	<div>Services</div>
 	<ul>
 		<li>Impaired Cow Care</li>
+		<li>Fertility Management with ultrasound scanner</li>
 		<li>Dairy Herd Management</li>
 		<li>24 Hour Emergency Service</li>
 		<li>Disease Control - Herd Vaccination Protocols</li>
@@ -11,7 +12,6 @@
 		<li>Locomotion Scoring</li>
 		<li>Metabolic Disease Control</li>
 		<li>Nutrition Consultation</li>
-		<li>Fertility Management with ultrasound scanner</li>
 	</ul>
 </div>
 <div id="serv-images">
