@@ -3,23 +3,11 @@
     require_once('includes/scripts/language.php');
 
     Functions::clearPrevCookies();
-<<<<<<< HEAD
-    $cookieLanguage = new CookieLanguage();
-=======
->>>>>>> develop_php
-
     $contentFile = Functions::getActionFile(dirname(__FILE__));
     define('FILE', $contentFile);
     define('ACTION', basename($contentFile, '.php'));
 	define('LINK', Functions::getBaseUrl());
 
-<<<<<<< HEAD
-    $action = basename($contentFile, '.php');
-    $title = Functions::getTitle($cookieLanguage->value, $action);
-    define('TITLE', $title);
-
-    $basePath = 'includes/internalization/' . $cookieLanguage->value . '/';
-=======
 	if(isset($_GET['action']) && !empty($_GET['action'])) {
 		define('LANG', Functions::getLanguage($_GET['action']));
 	} else {
@@ -30,8 +18,6 @@
     define('TITLE', $title);
 
 	$basePath = 'includes/internalization/' . LANG . '/';
-
->>>>>>> develop_php
 ?>
 <!DOCTYPE html>
 <html lang="<?=LANG?>">

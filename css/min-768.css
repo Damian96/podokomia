@@ -17,35 +17,11 @@ header {
     height: initial
 }
 
-.welcome {
+#home-desc {
     text-align: left
-}
-
-#desc {
-    text-align: left
-}
-
-.mcol30 {
-    width: 30%;
-    display: inline-block
-}
-
-.mmcol70 {
-    width: 85%;
-    display: inline-block
-}
-
-.mcol50 {
-    width: 50%;
-    display: inline-block
 }
 
 #main-menu ul li {
     width: 24.5%;
-    display: inline-block
-}
-
-.mcol30 {
-    width: 30%;
     display: inline-block
 }
