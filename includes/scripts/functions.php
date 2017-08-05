@@ -1,28 +1,26 @@
 <?php
 class Functions {
-	public static function getReverseAction($lang, $name) {
-		if($lang === 'el') {
-			if($name === 'αρχική') {
-				return 'homepage';
-			} else if($name === 'υπηρεσίες') {
-				return 'services';
-			} else if($name === 'άρθρα') {
-				return 'articles';
-			} else if($name === 'επικοινωνία') {
-				return 'contact';
-			}
-		} else if($lang === 'en') {
-			if($name === 'homepage') {
-				return 'αρχική';
-			} else if($name === 'services') {
-				return 'υπηρεσίες';
-			} else if($name === 'articles') {
-				return 'άρθρα';
-			} else if($name === 'contact') {
-				return 'επικοινωνία';
-			}
+	public static function getLanguageLinks($name) {
+		if(($name === 'υπηρεσίες') || ($name === 'services')) {
+			return [
+				'υπηρεσίες',
+				'services',
+			];
+		} else if(($name === 'άρθρα') || ($name === 'articles')) {
+			return [
+				'άρθρα',
+				'articles',
+			];
+		} else if(($name === 'επικοινωνία') || ($name === 'contact')) {
+			return [
+				'επικοινωνία',
+				'contact',
+			];
 		} else {
-			return 'αρχική';
+			return [
+				'αρχική',
+				'homepage',
+			];
 		}
 	}
 	
@@ -95,33 +93,21 @@ class Functions {
             unset($_COOKIE['prefLang']);
         }
     }
-
-    function getUrlCurrently($filter = array()) {
-        $pageURL = isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on" ? "https://" : "http://";
+	
+	public static function getBaseUrl() {
+		$pageURL = isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on" ? "https://" : "http://";
 
         $pageURL .= $_SERVER["SERVER_NAME"];
 
         if ($_SERVER["SERVER_PORT"] != "80") {
             $pageURL .= ":".$_SERVER["SERVER_PORT"];
         }
-
-        $pageURL .= $_SERVER["REQUEST_URI"];
-
-
-        if (strlen($_SERVER["QUERY_STRING"]) > 0) {
-            $pageURL = rtrim(substr($pageURL, 0, -strlen($_SERVER["QUERY_STRING"])), '?');
-        }
-
-        $query = $_GET;
-        foreach ($filter as $key) {
-            unset($query[$key]);
-        }
-
-        if (sizeof($query) > 0) {
-            $pageURL .= '?' . http_build_query($query);
-        }
-
-        return $pageURL;
-    }
+		
+		if($_SERVER['SERVER_NAME'] === 'localhost') {
+			$pageURL .= '/podokomia/';
+		}
+	
+		return $pageURL;
+	}
 }
 ?>

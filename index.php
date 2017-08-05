@@ -7,12 +7,12 @@
     $contentFile = Functions::getActionFile(dirname(__FILE__));
     define('FILE', $contentFile);
     define('ACTION', basename($contentFile, '.php'));
+	define('LINK', Functions::getBaseUrl());
+
 	if(isset($_GET['action']) && !empty($_GET['action'])) {
 		define('LANG', Functions::getLanguage($_GET['action']));
-		define('REVERSE_ACTION', Functions::getReverseAction(LANG, $_GET['action']));
 	} else {
 		define('LANG', Functions::getLanguage('αρχική'));
-		define('REVERSE_ACTION', Functions::getReverseAction(LANG, 'αρχική'));
 	}
 	
 	$title = Functions::getTitle(LANG, ACTION);
