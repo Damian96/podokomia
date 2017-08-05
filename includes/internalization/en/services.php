@@ -1,6 +1,7 @@
 <div class="section" id="avail-services">
 	<div>Services</div>
 	<ul>
+		<li>Fertility Management with ultrasound scanner</li>
 		<li>Impaired Cow Care</li>
 		<li>Dairy Herd Management</li>
 		<li>24 Hour Emergency Service</li>
@@ -11,7 +12,6 @@
 		<li>Locomotion Scoring</li>
 		<li>Metabolic Disease Control</li>
 		<li>Nutrition Consultation</li>
-		<li>Fertility Management with ultrasound scanner</li>
 	</ul>
 </div>
 <div id="serv-images">
