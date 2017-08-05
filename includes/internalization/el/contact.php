@@ -3,7 +3,6 @@
 		<p>
 			<span class="icon-mobile"></span>
 			<span style="font-weight:bold">Κινητό</span>
-            <span style="font-weight:bold">Mobile</span>
 			<span itemprop="telephone">:  +30 69 86 79 84 97</span>
 		</p>
 		<p>

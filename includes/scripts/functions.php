@@ -44,6 +44,18 @@ class Functions {
         }
         return self::searchContentFile($baseP, $action);
     }
+	
+	public static function getLanguage() {
+		$language = 'el';
+		if(isset($_GET['action']) && !empty($_GET['action']) && ($temp = $_GET['action'])) {
+			if(($temp === 'αρχική') || ($temp === 'υπηρεσίες') || ($temp === 'άρθρα') || ($temp === 'επικοινωνία')) {
+				$language = 'el';
+			} else if(($temp === 'index') || ($temp === 'homepage') || ($temp === 'services') || ($temp === 'articles') || ($temp === 'contact')) {
+				$language = 'en';
+			}
+		}
+		return $language;
+	}
 
     public static function clearPrevCookies() {
         if(isset($_COOKIE['pd.lang'])) {

@@ -3,21 +3,20 @@
     require_once('includes/scripts/language.php');
 
     Functions::clearPrevCookies();
-    $cookieLanguage = new CookieLanguage();
 
     $contentFile = Functions::getActionFile(dirname(__FILE__));
     define('FILE', $contentFile);
     define('ACTION', basename($contentFile, '.php'));
-
-    $action = basename($contentFile, '.php');
-	$action = ($action === 'homepage') ? 'index' : $action;
-    $title = Functions::getTitle($cookieLanguage->value, $action);
+	define('LANG', Functions::getLanguage());
+	
+	$title = Functions::getTitle(LANG, ACTION);
     define('TITLE', $title);
 
-    $basePath = 'includes/internalization/' . $cookieLanguage->value . '/';
+	$basePath = 'includes/internalization/' . LANG . '/';
+
 ?>
 <!DOCTYPE html>
-<html lang="<?=$cookieLanguage->value?>">
+<html lang="<?=LANG?>">
 <?php require_once($basePath . "head.php"); ?>
 <body>
 	<div id="fb-root"></div>
@@ -30,7 +29,7 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<div id="wrapper" class="col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
 <?php require_once($basePath . "header.php"); ?>
-		<main id="main" class="<?= $action ?>">
+		<main id="main" class="<?= ACTION ?>">
 			<aside id="sibebar" class="col-sm-3 col-md-3 col-lg-3">
 <?php require_once($basePath . "sidebar.php"); ?>
 			</aside>
