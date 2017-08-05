@@ -17,7 +17,7 @@
 	<meta name="google-site-verification" content="JVBFzUZhTGBX1Xfb4mIoYLrYg9cJskVOMv41S97pF8M" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="css/layout.min.css" />
-	<link rel="stylesheet" href="css/<?=constant('ACTION')?>.css" />
+	<link rel="stylesheet" href="css/<?=constant('ACTION')?>.min.css" />
     <link rel="stylesheet" media="(min-width : 320px)" href="css/min-320.min.css" />
     <link rel="stylesheet" media="(min-width : 480px)" href="css/min-480.min.css" />
     <link rel="stylesheet" media="(min-width : 768px)" href="css/min-768.min.css" />

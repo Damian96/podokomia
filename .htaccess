@@ -10,4 +10,5 @@ RewriteEngine on
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+#On production remove '/podokomia'.
 RewriteRule ^(.+)?$ /podokomia/index.php?action=$1
