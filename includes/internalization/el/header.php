@@ -13,7 +13,7 @@
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-6 text-center">
 				<div id="info">
-					<p id="email"><span class="icon-paper-plane"></span>vas.zafeirakis[at]gmail.com</p>
+					<p id="email"><span class="icon-paper-plane"></span>vas.zafeirakis@gmail.com</p>
 					<p class="phone"><span class="icon-mobile"></span>6986798497</p>
 				</div>
 				<div id="slideshow">slideshow</div>
