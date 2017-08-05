@@ -103,8 +103,10 @@ class Functions {
             $pageURL .= ":".$_SERVER["SERVER_PORT"];
         }
 		
-		if($_SERVER['SERVER_NAME'] === 'localhost') {
+		if($_SERVER['SERVER_NAME'] === 'localhost' || (strpos($_SERVER['SERVER_NAME'], '192.168.1') > -1)) {
 			$pageURL .= '/podokomia/';
+		} else {
+			$pageURL .= '/';
 		}
 	
 		return $pageURL;
