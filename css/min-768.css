@@ -49,3 +49,8 @@ header {
     width: 30%;
     display: inline-block
 }
+
+#header > div:nth-child(2),
+#header > div:nth-child(3) {
+    height: 208px;
+}
