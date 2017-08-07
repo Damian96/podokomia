@@ -11,6 +11,7 @@ RewriteEngine on
 # Dont redirect if url is a valid file
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt|\.eot|\.svg|\.ttf|\.woff)$ [NC]
 
 # Emit 'podokomia' on production
-RewriteRule ^(.+)?$ /podokomia/index.php?action=$1
+RewriteRule ^(.+)?$ /podokomia/index.php?action=$1 [L,QSA]
