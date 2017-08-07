@@ -50,7 +50,11 @@ class Functions {
 
     public static function getActionFile($baseP) {
         $action = 'homepage';
+<<<<<<< HEAD
 		if(!isset($_GET['action']) || empty($_GET['action'])) {
+=======
+		if(!isset($_GET) || !isset($_GET['action']) || empty($_GET['action'])) {
+>>>>>>> develop_php
 			return 'homepage.php';
 		}
 		if(($_GET['action'] === 'αρχική') || ($_GET['action'] === 'homepage') || ($_GET['action'] === 'index')) {

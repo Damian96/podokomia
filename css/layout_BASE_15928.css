@@ -1,59 +1,36 @@
+body {
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    background-color: #193354 !important;
+    max-height: 1000px;
+    overflow-x: hidden
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 header span.icon-mobile {
     font-size: 1.5em
 }
 
 #info,
 #info > * {
-    height: 50%
+    height: 50%;
 }
 
-#lang-control {
-    width: 100%;
-	text-align: right;
-
-}
-
-#lang-control a {
-	display: inline-block;
-}
-
-.l-img {
-    width: 32px;
-	height: 16px;
-    cursor: pointer
-}
-
-#name {
-    margin-top: 0;
-    margin-bottom: 0
-}
-
-#prof {
-    margin-top: 0;
-    font-size: 1.2em;
-	margin-top: 5px;
-}
-
-#email,
-#phone {
-	font-size: 1.3em;
-}
-
-#email [class^="icon"],
-#phone [class^="icon"] {
-	position: relative;
-	top: 2px;
-	left: -4px;
-}
-
-#email {
-    margin-top: 0;
+#info > * {
     padding-top: 3.75%;
 }
 
-#phone {
-    margin-top: 0;
-    padding-bottom: 12px;
+#wrapper {
+    background-color: #ffffff;
+    position: relative;
+}
+
+#wrapper > *:not(#lang-control) {
+    margin-bottom: 20px;
 }
 
 #clues {
@@ -70,29 +47,6 @@ header span.icon-mobile {
 
 #banner #info span[class^="icon"] {
     margin-right: 5px
-}
-
-
-body {
-    padding: 0;
-    font-family: 'Source Sans Pro', sans-serif !important;
-    background-color: #193354 !important;
-    max-height: 1000px;
-    overflow-x: hidden
-}
-
-a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-#wrapper {
-    background-color: #ffffff;
-    position: relative;
-}
-
-#wrapper > *:not(#lang-control) {
-    margin-bottom: 20px;
 }
 
 #main-menu {
@@ -155,6 +109,10 @@ aside {
 	margin-bottom: 10px;
 }
 
+#main-contact {
+    text-align: center
+}
+
 footer {
     font-size: .8em;
     color: #fff;
@@ -175,6 +133,53 @@ footer > div {
     top: -60px;
     margin-top: 100px;
     margin-left: 10px
+}
+
+#lang-control {
+    width: 100%;
+	text-align: right;
+}
+
+#lang-control a {
+	display: inline-block;
+}
+
+.l-img {
+    width: 32px;
+	height: 16px;
+    cursor: pointer
+}
+
+#name {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+#prof {
+    margin-top: 0;
+    font-size: 1.2em;
+	margin-top: 5px;
+}
+
+#email,
+#phone {
+	font-size: 1.3em;
+}
+
+#email [class^="icon"],
+#phone [class^="icon"] {
+	position: relative;
+	top: 2px;
+	left: -4px;
+}
+
+#email {
+    margin-top: 0;
+}
+
+#phone {
+    margin-top: 0;
+    padding-bottom: 12px;
 }
 
 .medialink {

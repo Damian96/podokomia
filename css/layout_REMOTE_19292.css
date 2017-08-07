@@ -4,13 +4,12 @@ header span.icon-mobile {
 
 #info,
 #info > * {
-    height: 50%
+    height: 50%;
 }
 
 #lang-control {
     width: 100%;
 	text-align: right;
-
 }
 
 #lang-control a {

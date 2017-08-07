@@ -3,6 +3,7 @@
 	<ul>
 		<li>Fertility Management with ultrasound scanner</li>
 		<li>Impaired Cow Care</li>
+		<li>Fertility Management with ultrasound scanner</li>
 		<li>Dairy Herd Management</li>
 		<li>24 Hour Emergency Service</li>
 		<li>Disease Control - Herd Vaccination Protocols</li>

@@ -7,10 +7,14 @@ header span.icon-mobile {
     height: 50%
 }
 
+<<<<<<< HEAD
+#email {
+    padding-top: 3.75%;
+=======
 #lang-control {
     width: 100%;
 	text-align: right;
-
+>>>>>>> develop_php
 }
 
 #lang-control a {
