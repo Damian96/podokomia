@@ -17,10 +17,10 @@ header span.icon-mobile {
 
 #info,
 #info > * {
-    height: 50%;
+    height: 50%
 }
 
-#info > * {
+#email {
     padding-top: 3.75%;
 }
 
