@@ -1,3 +1,7 @@
+User-agent: Googlebot-Image/1.0
+
+Disallow: /images
+
 User-agent: *
 
 Disallow: /cgi-bin
@@ -9,7 +13,3 @@ Disallow: /admin
 User-agent: *
 
 Disallow: /downloads
-
-User-agent: *
-
-Disallow: /maintanace-files
