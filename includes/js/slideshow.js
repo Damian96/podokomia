@@ -35,7 +35,8 @@ $(window).on('load', function() {
 });
 
 $(document).ready(function() {
-	setInterval(function() {
+	setTimeout(function() {
+		setInterval(function() {
         var s;
         switch (prevImg) {
             case lastImg:
@@ -56,4 +57,5 @@ $(document).ready(function() {
         });
         prevImg = s
     }, 3000);
+	});
 })

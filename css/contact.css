@@ -1,3 +1,8 @@
+main.contact #content > div:first-child {
+	display: block;
+	margin: 10% auto auto auto;
+}
+
 main.contact #content .icon-mobile {
 	font-size: 1.3em;
 }
