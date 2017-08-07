@@ -44,13 +44,7 @@
 		</main>
 	</div>
 <?php require_once($basePath . "footer.php"); ?>
-<<<<<<< HEAD
 	<script src="includes/js/slideshow.min.js"></script>
 	<script src="includes/js/onLoad.min.js"></script>
-=======
-	
-	<script src="includes/js/slideshow.js"></script>
-	<script src="includes/js/onLoad.js"></script>
->>>>>>> develop_php
 </body>
 </html>

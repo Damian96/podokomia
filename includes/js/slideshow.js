@@ -30,11 +30,6 @@ $(window).on('load', function() {
             $(this).css('top', -heightSum + 'px');
         }
     });
-<<<<<<< HEAD
-	container.height(container.prev().height());
-	$('header > div:nth-child(3)').height($('header > div:nth-child(2)').height());
-=======
->>>>>>> develop_php
     lastImg = slideImgs.length - 1;
 });
 
@@ -60,11 +55,6 @@ $(document).ready(function() {
                 $(this).css("opacity", "1");
             });
             prevImg = s
-<<<<<<< HEAD
         }, 3000);
-	}, 2000);
-=======
-    }, 3000);
 	}, 1500);
->>>>>>> develop_php
 })

@@ -1,5 +1,9 @@
 /robots.txt
 /sitemap.xml
-/maintanance-files
+
+/*_BASE_*
+/*_BACKUP*
+/*_LOCAL_*
+/*_REMOTE_*
 
 !.gitignore

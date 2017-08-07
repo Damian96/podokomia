@@ -3,23 +3,22 @@ header span.icon-mobile {
 }
 
 #info,
-#info > * {
+#info>* {
     height: 50%
 }
 
 #lang-control {
     width: 100%;
-	text-align: right;
-
+    text-align: right
 }
 
 #lang-control a {
-	display: inline-block;
+    display: inline-block
 }
 
 .l-img {
     width: 32px;
-	height: 16px;
+    height: 16px;
     cursor: pointer
 }
 
@@ -31,29 +30,29 @@ header span.icon-mobile {
 #prof {
     margin-top: 0;
     font-size: 1.2em;
-	margin-top: 5px;
+    margin-top: 5px
 }
 
 #email,
 #phone {
-	font-size: 1.3em;
+    font-size: 1.3em
 }
 
 #email [class^="icon"],
 #phone [class^="icon"] {
-	position: relative;
-	top: 2px;
-	left: -4px;
+    position: relative;
+    top: 2px;
+    left: -4px
 }
 
 #email {
     margin-top: 0;
-    padding-top: 3.75%;
+    padding-top: 3.75%
 }
 
 #phone {
     margin-top: 0;
-    padding-bottom: 12px;
+    padding-bottom: 12px
 }
 
 #clues {
@@ -61,7 +60,7 @@ header span.icon-mobile {
 }
 
 #banner {
-	margin-bottom: 2.5%;
+    margin-bottom: 2.5%
 }
 
 #banner:last-child {
@@ -72,87 +71,86 @@ header span.icon-mobile {
     margin-right: 5px
 }
 
-
 body {
     padding: 0;
-    font-family: 'Source Sans Pro', sans-serif !important;
-    background-color: #193354 !important;
+    font-family: 'Source Sans Pro', sans-serif!important;
+    background-color: #193354!important;
     max-height: 1000px;
     overflow-x: hidden
 }
 
 a {
     text-decoration: none;
-    color: #ffffff;
+    color: #fff
 }
 
 #wrapper {
-    background-color: #ffffff;
-    position: relative;
+    background-color: #fff;
+    position: relative
 }
 
-#wrapper > *:not(#lang-control) {
-    margin-bottom: 20px;
+#wrapper>*:not(#lang-control) {
+    margin-bottom: 20px
 }
 
 #main-menu {
     width: 100%;
     position: relative;
-	margin-top: 50px;
-    padding: 0;
+    margin-top: 50px;
+    padding: 0
 }
 
-#main-menu > .col-lg-3:not(:first-child):not(:last-child) {
-    border-width: 1px 0 1px 1px;
+#main-menu>.col-lg-3:not(:first-child):not(:last-child) {
+    border-width: 1px 0 1px 1px
 }
 
-#main-menu > .col-lg-3:first-child {
-    border-width: 1px 0 1px 1px;
+#main-menu>.col-lg-3:first-child {
+    border-width: 1px 0 1px 1px
 }
 
-#main-menu > .col-lg-3:last-child {
-    border-width: 1px;
+#main-menu>.col-lg-3:last-child {
+    border-width: 1px
 }
 
-#main-menu > .col-lg-3 {
+#main-menu>.col-lg-3 {
     margin: 0;
-	padding: 0;
+    padding: 0;
     height: 100%;
     background-color: #aacc14;
     text-align: center;
-    border-color: #000000;
-    border-style: solid;
+    border-color: #000;
+    border-style: solid
 }
 
-#main-menu > .col-lg-3:hover {
-    background-color: #a6aaad;
+#main-menu>.col-lg-3:hover {
+    background-color: #a6aaad
 }
 
 #main-menu a {
-	display: block;
-	color: #ffffff;
-	height: 100%;
-	padding: 5px 0;
-	font-size: 19px;
+    display: block;
+    color: #fff;
+    height: 100%;
+    padding: 5px 0;
+    font-size: 19px
 }
 
-main > *:nth-child(2) {
-	padding-top: 15px;
-	min-height: 400px;
-	padding-bottom: 15px;
+main>*:nth-child(2) {
+    padding-top: 15px;
+    min-height: 400px;
+    padding-bottom: 15px
 }
 
 aside {
-	padding-left: 0px !important;
-	padding-right: 0px !important;
+    padding-left: 0px!important;
+    padding-right: 0px!important
 }
 
 #content {
-	font-size: 17px;
+    font-size: 17px
 }
 
 #content .section {
-	margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 footer {
@@ -162,12 +160,12 @@ footer {
     border-radius: 1.5em
 }
 
-footer > div {
-	text-align: center;
+footer>div {
+    text-align: center
 }
 
 #developer-link a {
-	color: #000000;
+    color: #000
 }
 
 #services {
@@ -194,10 +192,10 @@ footer > div {
 }
 
 .fb-page {
-	margin-top: 50px;
+    margin-top: 50px
 }
 
 #articles-1 {
-    -webkit-transform: scale(0.5, 0.5);
-    transform: scale(0.5, 0.5)
+    -webkit-transform: scale(.5, .5);
+    transform: scale(.5, .5)
 }
