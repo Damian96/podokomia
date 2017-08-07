@@ -8,6 +8,9 @@ Options FollowSymlinks
 # Enable mod_rewrite
 RewriteEngine on
 
+# Dont redirect if url is a valid file
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+
+# Emit 'podokomia' on production
 RewriteRule ^(.+)?$ /podokomia/index.php?action=$1

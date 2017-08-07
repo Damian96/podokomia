@@ -32,8 +32,10 @@ $(window).on('load', function() {
 	container.height(container.prev().height());
 	$('header > div:nth-child(2)').height($('header > div:first-child').height());
     lastImg = slideImgs.length - 1;
-    
-    setInterval(function() {
+});
+
+$(document).ready(function() {
+	setInterval(function() {
         var s;
         switch (prevImg) {
             case lastImg:
@@ -54,4 +56,4 @@ $(window).on('load', function() {
         });
         prevImg = s
     }, 3000);
-});
+})
