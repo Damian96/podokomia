@@ -3,6 +3,7 @@
     <title><?=$title?></title>
     <link rel="stylesheet" href="css/layout.min.css" />
     <link rel="stylesheet" href="css/slideshow.min.css" />
+    <link rel="stylesheet" href="css/podokomia-icons.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <?php if(($_SERVER['SERVER_NAME'] !== 'localhost') && (strpos($_SERVER['SERVER_NAME'], '192.168.1') == -1)) { ?>
@@ -10,7 +11,6 @@
 	<?php } ?>
 	<meta name="description" content="Vasilis Zafeirakis is a Veterinarian that lives in Thessaloniki, Greece and works as a Cattle Hoof Trimmer."/>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="css/podokomia-icons.css" />
     <meta name="robots" content="index,follow,noodp"/>
     <meta name="googlebot" content="index,follow"/>
     <meta name="google" content="translate" />
@@ -27,5 +27,5 @@
     <link rel="stylesheet" media="(min-width : 768px)" href="css/min-768.min.css" />
     <link rel="stylesheet" media="(min-width : 1440px)" href="css/min-1440.min.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="js/twitter-widj.js"></script>
+	<script src="js/twitter-widj.min.js"></script>
 </head>
