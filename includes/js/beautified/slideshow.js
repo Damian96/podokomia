@@ -25,8 +25,8 @@ $(document).ready(function() {
         if(index == 1) {
             $(this).css('top', -imgHeight + 'px');
         } else if(index > 1) {
-            $(this).css('top', -heightSum + 'px');
             heightSum += imgHeight;
+            $(this).css('top', -heightSum + 'px');
         }
     });
     lastImg = slideImgs.length - 1;
