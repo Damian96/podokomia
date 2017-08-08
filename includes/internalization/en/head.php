@@ -1,12 +1,12 @@
 <head>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title><?=$title?></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/layout.min.css" />
     <link rel="stylesheet" href="css/slideshow.min.css" />
     <link rel="stylesheet" href="css/podokomia-icons.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <?php if(($_SERVER['SERVER_NAME'] !== 'localhost') && (strpos($_SERVER['SERVER_NAME'], '192.168.1') == -1)) { ?>
     <script>!function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-74692550-9","auto"),ga("send","pageview");</script>
 	<?php } ?>
