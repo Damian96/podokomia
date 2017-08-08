@@ -19,16 +19,17 @@ $(window).on('load', function() {
     container.html(code);
 
     slideImgs = $('.slide-img');
-    var heightSum = 0;
+    var heightSum = imgHeight;
+    var pushTop = 10;
     slideImgs.each(function(index) {
         $(this).css('z-index', 10 + index + 1);
         if(index == 1) {
-            heightSum += imgHeight;
-            $(this).css('top', -imgHeight + 'px');
+            $(this).css('top', -imgHeight - pushTop + 'px');
         } else if(index > 1) {
             heightSum += imgHeight;
-            $(this).css('top', -heightSum + 'px');
+            $(this).css('top', -heightSum - pushTop + 'px');
         }
+        heightSum += imgHeight;
     });
     lastImg = slideImgs.length - 1;
 });

@@ -108,5 +108,12 @@ class Functions {
 	
 		return $pageURL;
 	}
+    
+    public static function getBasePath() {
+        if(($_SERVER['SERVER_NAME'] === 'localhost') || (strpos($_SERVER['SERVER_NAME'], '192.168.1') > -1)) {
+            return $_SERVER['DOCUMENT_ROOT'] . '/podokomia';
+        }
+        return $_SERVER['DOCUMENT_ROOT'];
+    }
 }
 ?>
