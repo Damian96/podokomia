@@ -15,4 +15,10 @@
 		<li>Nutrition Consultation</li>
 	</ul>
 </div>
-<?php require_once(Functions::getBasePath() . '/includes/serv-images.php'); ?>
+<div id="serv-images">
+    <img alt="service-1" src="<?= Function::getBaseUrl() . 'images/services-1.jpg' ?>" class="service-img" alt="services-1"/>
+    <img alt="service-2" src="<?= Function::getBaseUrl() . 'images/services-2.jpg' ?>" class="service-img" alt="services-2"/>
+    <img alt="service-3" src="<?= Function::getBaseUrl() . 'images/services-3.jpg' ?>" class="service-img" alt="services-3"/>
+    <img alt="service-4" src="<?= Function::getBaseUrl() . 'images/services-4.jpg' ?>" class="service-img" alt="services-4"/>
+</div>
+<?php require_once(Functions::getBasePath() . '/includes/serv-modal.php'); ?>

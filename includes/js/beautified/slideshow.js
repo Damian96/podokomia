@@ -9,7 +9,7 @@ var prevImg = 0,
     container,
     imgHeight = 120;
 
-$(window).on('load', function() {
+$(document).ready(function() {
     container = $('#slideshow');
     container.height(container.prev().height());
     var code = '';
@@ -20,42 +20,36 @@ $(window).on('load', function() {
 
     slideImgs = $('.slide-img');
     var heightSum = imgHeight;
-    var pushTop = 10;
     slideImgs.each(function(index) {
         $(this).css('z-index', 10 + index + 1);
         if(index == 1) {
-            $(this).css('top', -imgHeight - pushTop + 'px');
+            $(this).css('top', -imgHeight + 'px');
         } else if(index > 1) {
+            $(this).css('top', -heightSum + 'px');
             heightSum += imgHeight;
-            $(this).css('top', -heightSum - pushTop + 'px');
         }
-        heightSum += imgHeight;
     });
     lastImg = slideImgs.length - 1;
-});
-
-$(document).ready(function() {
-	setTimeout(function() {
-		setInterval(function() {
-            var s;
-            switch (prevImg) {
-                case lastImg:
-                    s = 0;
-                    break;
-                default:
-                    s = prevImg + 1
-            }
-            slideImgs.eq(prevImg).animate({
-                opacity: 0
-            }, 1500, function() {
-                $(this).css("opacity", "0");
-            });
-            slideImgs.eq(s).animate({
-                opacity: 1
-            }, 1500, function() {
-                $(this).css("opacity", "1");
-            });
-            prevImg = s
-        }, 3000);
-	}, 1500);
+    
+    setInterval(function() {
+        var s;
+        switch (prevImg) {
+            case lastImg:
+                s = 0;
+                break;
+            default:
+                s = prevImg + 1
+        }
+        slideImgs.eq(prevImg).animate({
+            opacity: 0
+        }, 1500, function() {
+            $(this).css("opacity", "0");
+        });
+        slideImgs.eq(s).animate({
+            opacity: 1
+        }, 1500, function() {
+            $(this).css("opacity", "1");
+        });
+        prevImg = s
+    }, 3000);
 })

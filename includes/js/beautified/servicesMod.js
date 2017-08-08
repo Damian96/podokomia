@@ -1,5 +1,7 @@
+var modal;
+
 $(window).on('load', function() {
-    var modal = $('#servImgModal');
+    modal = $('#servImgModal');
 
     var images = $('.service-img');
     var modalImg = $("#modImg01");
@@ -7,6 +9,7 @@ $(window).on('load', function() {
 
     images.click(function() {
         modal.show();
+        $(window).on('keydown', escapeModal);
         modalImg.attr('src', $(this).attr('src'));
         captionText.html($(this).attr('alt'));
     });
@@ -15,5 +18,17 @@ $(window).on('load', function() {
 
     span.click(function() {
         modal.hide();
+        $(window).off('keydown');
+    });
+    
+    modalImg.click(function() {
+       window.location.replace($(this).attr('src')); 
     });
 });
+
+function escapeModal(event) {
+    if(event.keyCode == 27) {
+        modal.hide();
+    }
+    return true;
+}
