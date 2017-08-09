@@ -33,6 +33,7 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<div id="wrapper" class="col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
 <?php require_once($basePath . "header.php"); ?>
+        <script src="<?= LINK . '/js/slideshow.min.js' ?>"></script>
 		<main id="main" class="<?= ACTION ?>">
 			<aside id="sibebar" class="col-sm-3 col-md-3 col-lg-3">
 <?php require_once($basePath . "sidebar.php"); ?>
@@ -44,8 +45,7 @@
 		</main>
 	</div>
 <?php require_once($basePath . "footer.php"); ?>
-	<script src="includes/js/slideshow.min.js"></script>
-	<script src="includes/js/servicesMod.min.js"></script>
-	<script src="includes/js/onLoad.min.js"></script>
+	<script src="<?= LINK . '/js/servicesMod.min.js' ?>"></script>
+	<script src="<?= LINK . '/js/onLoad.min.js' ?>"></script>
 </body>
 </html>

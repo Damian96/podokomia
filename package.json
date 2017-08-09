@@ -6,10 +6,9 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "minifyCSS": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./css/beautified/",
-    "minifyJS": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./includes/js/beautified/",
-    "minifyAll": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./includes/js/beautified/ && npm-run minify --template ./../{{filename}}.min.{{ext}} ./css/beautified/"
+    "minifyJS": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./js/beautified/",
+    "minifyAll": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./js/beautified/ && npm-run minify --template ./../{{filename}}.min.{{ext}} ./css/beautified/"
   },
   "repository": {
     "type": "git",
