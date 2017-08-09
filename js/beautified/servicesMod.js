@@ -32,8 +32,8 @@ function escapeModal(event) {
     return true;
 }
 
-function destroyModal() {
-    if(($(this).closest('.modal-content').length <= 0) || $(this).closest('#modCaption').length <= 0) {
+function destroyModal(event) {
+    if((event.target.id !== 'modImg01') && (event.target.id !== 'modCaption')) {
         hideModal();
     }
 }
