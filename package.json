@@ -4,11 +4,14 @@
   "description": "A site for a local vent.",
   "main": "index.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "npm-run": "^4.1.2",
+    "minifier": "^0.8.1"
+  },
   "scripts": {
     "minifyCSS": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./css/beautified/",
     "minifyJS": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./js/beautified/",
-    "minifyAll": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./js/beautified/ && npm-run minify --template ./../{{filename}}.min.{{ext}} ./css/beautified/"
+    "minifyAll": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./css/beautified/ && npm-run minify --template ./../{{filename}}.min.{{ext}} ./js/beautified/"
   },
   "repository": {
     "type": "git",

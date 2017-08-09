@@ -59,18 +59,6 @@ header span.icon-mobile {
     text-align: center
 }
 
-#banner {
-    margin-bottom: 2.5%
-}
-
-#banner:last-child {
-    text-align: center
-}
-
-#banner #info span[class^="icon"] {
-    margin-right: 5px
-}
-
 body {
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif!important;
@@ -149,10 +137,6 @@ aside {
     font-size: 17px
 }
 
-#content .section {
-    margin-bottom: 10px
-}
-
 footer {
     font-size: .8em;
     color: #fff;
@@ -168,34 +152,6 @@ footer>div {
     color: #000
 }
 
-#services {
-    position: relative;
-    top: -60px;
-    margin-top: 100px;
-    margin-left: 10px
-}
-
-.medialink {
-    margin-right: 50px
-}
-
-#info i {
-    margin-right: 5px
-}
-
-#main-contact span[class^="icon"] {
-    margin: 0 5px
-}
-
-#sitemap {
-    text-decoration: underline
-}
-
 .fb-page {
     margin-top: 50px
-}
-
-#articles-1 {
-    -webkit-transform: scale(.5, .5);
-    transform: scale(.5, .5)
 }

@@ -1,5 +1,27 @@
 <?php
+/**
+ * The main helper-function class.
+ * @property string[] ACTIONS All the possible actions/pages of the site.
+ */
 class Functions {
+    const ACTIONS = [
+        'index',
+        'αρχική',
+        'υπηρεσίες',
+        'άρθρα',
+        'επικοινωνία',
+        'homepage',
+        'services',
+        'articles',
+        'contact',
+    ];
+    
+	/**
+	 * Makes the page title according to the current language and action/page.
+	 * @param  string $lang The language.
+	 * @param  string $action The action/page.
+	 * @return string The formatted title.
+	 */
 	public static function getTitle($lang, $action) {
 		$suffix = ($lang === 'el') ? ' - Ποδοκομία Αγελάδων' : ' - Cattle Hoof Trimming';
 		if($action === 'homepage') {
@@ -15,6 +37,11 @@ class Functions {
 		}
 	}
 	
+	/**
+	 * Makes the language links according to the specified action/page in all languages.
+	 * @param  string $name The current action/page.
+	 * @return array The actions/pages of the links.
+	 */
 	public static function getLanguageLinks($name) {
 		if(($name === 'υπηρεσίες') || ($name === 'services')) {
 			return [
@@ -39,8 +66,13 @@ class Functions {
 		}
 	}
 
-    public static function searchContentFile($base, $name) {
-        $filename = glob($base . '/includes/internalization/el/' . $name . '.php');
+    /**
+     * Searches the /podokomia/inludes/internalization/en/ according with the specified name.
+     * @param  string $name The filename to search.
+     * @return string The filename that has been found or if not 'homepage.php';
+     */
+    public static function searchContentFile($name) {
+        $filename = glob(self::getBasePath() . '/includes/internalization/en/' . $name . '.php');
         if($filename && (count($filename) == 1)) {
             return basename($filename[0]);
         } else {
@@ -48,10 +80,13 @@ class Functions {
         }
     }
 
-    public static function getActionFile($baseP) {
-        $action = 'homepage';
-		if(!isset($_GET) || !isset($_GET['action']) || empty($_GET['action'])) {
-			return 'homepage.php';
+    /**
+     * Gets the specified action according to the given $_GET['action'] variable.
+     * @return string The proper action name to be used.
+     */
+    public static function getActionFile() {
+		if(!isset($_GET) || !isset($_GET['action']) || empty($_GET['action']) || !in_array($_GET['action'], self::ACTIONS, true)) {
+			return 'homepage';
 		}
 		if(($_GET['action'] === 'αρχική') || ($_GET['action'] === 'homepage') || ($_GET['action'] === 'index')) {
 			$action = 'homepage';
@@ -62,13 +97,17 @@ class Functions {
 		} else if(($_GET['action'] === 'επικοινωνία') || ($_GET['action'] === 'contact')) {
 			$action = 'contact';
 		}
-		$action = strtolower($action);
-        return self::searchContentFile($baseP, $action);
+		return $action;
     }
 	
+	/**
+	 * Gets the current page language according to the given action.
+	 * @param  string|NULL $action The action to be tested.
+	 * @return string The correct language.
+	 */
 	public static function getLanguage($action) {
 		$language = 'el';
-		if(empty($action)) {
+		if(empty($action) || !in_array($action, self::ACTIONS, true)) {
 			return $language;
 		}
 		if(($action === 'αρχική') || ($action === 'υπηρεσίες') || ($action === 'άρθρα') || ($action === 'επικοινωνία')) {
@@ -79,7 +118,13 @@ class Functions {
 		return $language;
 	}
 
+    /**
+     * Clears all the cookies that are used until today.
+     */
     public static function clearPrevCookies() {
+        if(!isset($_COOKIE)) {
+            return;
+        }
         if(isset($_COOKIE['pd.lang'])) {
             unset($_COOKIE['pd.lang']);
         }
@@ -91,13 +136,17 @@ class Functions {
         }
     }
 	
+	/**
+	 * Gets the current domain base URL.
+	 * @return string The base URL.
+	 */
 	public static function getBaseUrl() {
-		$pageURL = isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on" ? "https://" : "http://";
+		$pageURL = (isset($_SERVER["HTTPS"]) && ($_SERVER["HTTPS"] == "on")) ? "https://" : "http://";
 
         $pageURL .= $_SERVER["SERVER_NAME"];
 
-        if ($_SERVER["SERVER_PORT"] != "80") {
-            $pageURL .= ":".$_SERVER["SERVER_PORT"];
+        if($_SERVER["SERVER_PORT"] != "80") {
+            $pageURL .= ":" . $_SERVER["SERVER_PORT"];
         }
 		
 		if(($_SERVER['SERVER_NAME'] === 'localhost') || (strpos($_SERVER['SERVER_NAME'], '192.168.1') > -1)) {
@@ -107,6 +156,10 @@ class Functions {
 		return $pageURL;
 	}
     
+    /**
+     * Gets the current server base path.
+     * @return string The base path.
+     */
     public static function getBasePath() {
         if(($_SERVER['SERVER_NAME'] === 'localhost') || (strpos($_SERVER['SERVER_NAME'], '192.168.1') > -1)) {
             return $_SERVER['DOCUMENT_ROOT'] . '/podokomia';

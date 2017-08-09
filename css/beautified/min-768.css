@@ -10,23 +10,16 @@ header {
     height: 136px
 }
 
-#menu {
-    display: block;
-    visibility: visible;
-    width: initial;
-    height: initial
-}
-
 #home-desc {
     text-align: left
 }
 
-#main-menu ul li {
+#main-menu > div {
     width: 24.5%;
     display: inline-block
 }
 
-#header > div:nth-child(2),
-#header > div:nth-child(3) {
+header > div:nth-child(2),
+header > div:nth-child(3) {
     height: 208px;
 }

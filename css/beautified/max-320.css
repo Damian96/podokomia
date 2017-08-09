@@ -11,7 +11,7 @@
     margin: 20px 0 0
 }
 
-#main-menu ul li {
+#main-menu > div {
     width: 100%;
     display: block;
     text-align: center

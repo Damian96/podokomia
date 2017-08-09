@@ -3,21 +3,20 @@
     require_once('includes/scripts/language.php');
 
     Functions::clearPrevCookies();
-    $contentFile = Functions::getActionFile(dirname(__FILE__));
-    define('FILE', $contentFile);
-    define('ACTION', basename($contentFile, '.php'));
+    $contentFile = Functions::getActionFile();
+    define('FILE', $contentFile . '.php');
+    define('ACTION', $contentFile);
 	define('LINK', Functions::getBaseUrl());
 
-	if(isset($_GET['action']) && !empty($_GET['action'])) {
+	if(isset($_GET['action']) && !empty($_GET['action']) && in_array($_GET['action'], Functions::ACTIONS, true)) {
 		define('LANG', Functions::getLanguage($_GET['action']));
 	} else {
 		define('LANG', Functions::getLanguage('αρχική'));
 	}
 	
-	$title = Functions::getTitle(LANG, ACTION);
-    define('TITLE', $title);
+    define('TITLE', Functions::getTitle(LANG, ACTION));
 
-	$basePath = 'includes/internalization/' . LANG . '/';
+	$basePath = './includes/internalization/' . LANG . '/';
 ?>
 <!DOCTYPE html>
 <html lang="<?=LANG?>">
