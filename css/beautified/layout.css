@@ -1,3 +1,14 @@
+body {
+    height: 100%;
+}
+
+img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 header span.icon-mobile {
     font-size: 1.5em
 }
@@ -88,11 +99,7 @@ a {
     padding: 0
 }
 
-#main-menu>.col-lg-3:not(:first-child):not(:last-child) {
-    border-width: 1px 0 1px 1px
-}
-
-#main-menu>.col-lg-3:first-child {
+#main-menu>.col-lg-3:not(:last-child) {
     border-width: 1px 0 1px 1px
 }
 

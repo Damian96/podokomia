@@ -119,3 +119,23 @@
 }
 
 /* End Image Modal Popup */
+
+/* Responsive CSS */
+
+@media screen and (max-width:320px) {
+    .service-img {
+        width: 225px;
+        height: 175px;
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (min-width:321px) and (max-width:480px) {
+    .service-img {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+/* End Responsive CSS */

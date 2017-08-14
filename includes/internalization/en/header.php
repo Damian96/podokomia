@@ -1,8 +1,8 @@
 		<header class="col-sm-12 col-md-12 col-lg-12">
 			<div id="lang-control">
 				<?php $links = Functions::getLanguageLinks(ACTION); ?>
-				<a href="<?=constant('LINK') . '/' . $links[0]?>"><img alt="gr-flag" class="l-img" src="images/gr.jpg"/></a>
-				<a href="<?=constant('LINK') . '/' . $links[1] ?>"><img alt="uk-flag" class="l-img" src="images/uk.png"/></a>
+				<a title="Greek" href="<?=constant('LINK') . '/' . $links[0]?>"><img alt="gr-flag" class="l-img" src="images/gr.jpg"/></a>
+				<a title="English (UK)" href="<?=constant('LINK') . '/' . $links[1] ?>"><img alt="uk-flag" class="l-img" src="images/uk.png"/></a>
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-6">
 				<div id="clues">

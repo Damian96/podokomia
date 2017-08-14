@@ -1,1 +1,1 @@
-main.homepage{padding:25px}#home-desc{font-size:17px;padding:10px 0;text-align:justify;text-align-last:center}#home-img{display:block;margin:10px 0;width:185px;height:100px}
+#home-desc{font-size:17px;padding:10px 0;text-align:justify;text-align-last:center}#home-img{display:block;margin:10px 0;width:185px;height:100px}@media screen and (min-width:480px) and (max-width:768px){#home-img{margin:auto}}@media screen and (min-width:768px){main.homepage{padding:25px}}

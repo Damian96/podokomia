@@ -34,10 +34,10 @@
 <?php require_once($basePath . "header.php"); ?>
         <script src="<?= LINK . '/js/slideshow.min.js' ?>"></script>
 		<main id="main" class="<?= ACTION ?>">
-			<aside id="sibebar" class="col-sm-3 col-md-3 col-lg-3">
+			<aside id="sibebar" class="col-xm-12 col-sm-12 col-md-3 col-lg-3">
 <?php require_once($basePath . "sidebar.php"); ?>
 			</aside>
-			<div id="content" class="col-sm-12 col-md-9 col-lg-9">			
+			<div id="content" class="col-xm-12 col-sm-12 col-md-9 col-lg-9">			
 <?php require_once($basePath . constant('FILE')); ?>
 			
 			</div>

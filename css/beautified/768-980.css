@@ -2,16 +2,15 @@ header {
     padding: 0 !important;
 }
 
-#lang-control {
-    text-align: right
+.l-img {
+    width: 64px;
+    height: 32px;
+    margin: 0 2px;
 }
 
 #logo {
-    height: 136px
-}
-
-#home-desc {
-    text-align: left
+    width: 121px;
+    height: 122px;
 }
 
 #main-menu > div {
@@ -22,4 +21,8 @@ header {
 header > div:nth-child(2),
 header > div:nth-child(3) {
     height: 208px;
+}
+
+footer {
+    font-size: 17px;
 }

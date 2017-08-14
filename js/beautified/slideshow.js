@@ -10,6 +10,9 @@ var prevImg = 0,
     imgHeight = 120;
 
 $(document).ready(function() {
+    if($(window).innerWidth() <= 320) {
+        return true;
+    }
     container = $('#slideshow');
     container.height(container.prev().height());
     var code = '';

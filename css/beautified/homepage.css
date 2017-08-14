@@ -1,7 +1,3 @@
-main.homepage {
-	padding: 25px;
-}
-
 #home-desc {
 	font-size: 17px;
 	padding: 10px 0;
@@ -15,3 +11,19 @@ main.homepage {
 	width: 185px;
 	height: 100px;
 }
+
+/* Responsive CSS */
+
+@media screen and (min-width:480px) and (max-width:768px) {
+    #home-img {
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:768px) {
+	main.homepage {
+		padding: 25px;
+	}
+}
+
+/* End Responsive CSS */
