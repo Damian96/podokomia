@@ -4,12 +4,10 @@
 				<a title="Greek" href="<?=constant('LINK') . '/' . $links[0]?>"><img alt="gr-flag" class="l-img" src="images/gr.jpg"/></a>
 				<a title="English (UK)" href="<?=constant('LINK') . '/' . $links[1] ?>"><img alt="uk-flag" class="l-img" src="images/uk.png"/></a>
 			</div>
-			<div class="col-sm-12 col-md-6 col-lg-6">
-				<div id="clues">
-					<h2 id="name">Vasilis Zafeirakis</h2>
-					<p id="prof">Veterinarian</p>
-					<img alt="veterinarian-logo" id="logo" src="images/logo.jpg" alt="vent logo"/>
-				</div>
+			<div id="clues" class="col-sm-12 col-md-6 col-lg-6">
+				<h2 id="name">Vasilis Zafeirakis</h2>
+				<p id="prof">Veterinarian</p>
+				<img alt="veterinarian-logo" id="logo" src="images/logo.jpg" alt="vent logo"/>
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-6 text-center">
 				<div id="info">

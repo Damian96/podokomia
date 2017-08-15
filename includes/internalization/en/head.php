@@ -23,10 +23,14 @@
 	<meta name="google-site-verification" content="JVBFzUZhTGBX1Xfb4mIoYLrYg9cJskVOMv41S97pF8M" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	<link rel="stylesheet" href="<?= constant('LINK') ?>/css/<?=constant('ACTION')?>.min.css" />
-    <link rel="stylesheet" media="(min-width : 320px)" href="<?= constant('LINK') ?>/css/min-320.min.css" />
-    <link rel="stylesheet" media="(min-width : 480px)" href="<?= constant('LINK') ?>/css/min-480.min.css" />
-    <link rel="stylesheet" media="(min-width : 768px)" href="<?= constant('LINK') ?>/css/min-768.min.css" />
-    <link rel="stylesheet" media="(min-width : 1440px)" href="<?= constant('LINK') ?>/css/min-1440.min.css" />
+    <link rel="stylesheet" media="(max-width : 320px)" href="<?= constant('LINK') ?>/css/max-320.min.css" />
+    <link rel="stylesheet" media="(min-width : 321px) and (max-width : 480px)" href="<?= constant('LINK') ?>/css/320-480.min.css" />
+    <link rel="stylesheet" media="(min-width : 481px) and (max-width : 768px)" href="<?= constant('LINK') ?>/css/480-768.min.css" />
+    <link rel="stylesheet" media="(min-width : 769px) and (max-width : 980px)" href="<?= constant('LINK') ?>/css/768-980.min.css" />
+    <link rel="stylesheet" media="(min-width : 981px) and (max-width : 1220px)" href="<?= constant('LINK') ?>/css/980-1220.min.css" />
+    <link rel="stylesheet" media="(min-width : 1221px) and (max-width : 1440px)" href="<?= constant('LINK') ?>/css/1220-1440.min.css" />
+    <link rel="stylesheet" media="(min-width : 1441px) and (max-width : 1824px)" href="<?= constant('LINK') ?>/css/1440-1824.min.css" />
+    <link rel="stylesheet" media="(min-width : 1825px)" href="<?= constant('LINK') ?>/css/min-1824.min.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="<?= constant('LINK') ?>/js/twitter-widj.min.js"></script>
 </head>

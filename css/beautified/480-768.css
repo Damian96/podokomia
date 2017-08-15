@@ -4,14 +4,16 @@
 }
 
 .twitter-timeline,
-.fb-page iframe {
+.fb-page {
     position: relative !important;
     min-height: 500px !important;
-    width: 80% !important;
+    width: 340px !important;
     display: block !important;
     margin: 15px auto !important;
-    -webkit-align-self: center;
-    align-self: center;
+}
+
+#content {
+    text-align: center;
 }
 
 footer {
