@@ -85,6 +85,26 @@
     animation-duration: 0.6s;
 }
 
+#modal-controls {
+    display: block;
+    position: relative;
+    z-index: 20;
+    top: -49%;
+}
+
+#modal-controls .glyphicon {
+    position: relative;
+    color: #ededed;
+}
+
+#modal-controls .glyphicon-arrow-left {
+    left: 0px;
+}
+
+#modal-controls .glyphicon-arrow-right {
+    left: 94.5%;
+}
+
 @-webkit-keyframes zoom {
     from {-webkit-transform:scale(0)}
     to {-webkit-transform:scale(1)}

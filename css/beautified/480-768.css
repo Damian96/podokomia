@@ -4,10 +4,10 @@
 }
 
 .twitter-timeline,
-.fb-page {
+#fb-timeline {
     position: relative !important;
-    min-height: 500px !important;
-    width: 340px !important;
+    min-height: 450px !important;
+    width: 80% !important;
     display: block !important;
     margin: 15px auto !important;
 }

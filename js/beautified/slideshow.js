@@ -10,7 +10,8 @@ var prevImg = 0,
     imgHeight = 120;
 
 $(document).ready(function() {
-    if($(window).innerWidth() <= 320) {
+    if($(window).innerWidth() <= 980) {
+        $('#slideshow').hide();
         return true;
     }
     container = $('#slideshow');

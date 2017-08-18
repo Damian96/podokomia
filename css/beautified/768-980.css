@@ -2,6 +2,11 @@ header {
     padding: 0 !important;
 }
 
+#lang-control {
+    text-align: center;
+    padding: 10px 0;
+}
+
 .l-img {
     width: 64px;
     height: 32px;
@@ -18,9 +23,17 @@ header {
     display: inline-block
 }
 
-header > div:nth-child(2),
-header > div:nth-child(3) {
+header > div:nth-child(2) {
     height: 208px;
+}
+
+.twitter-timeline,
+#fb-timeline {
+    position: relative !important;
+    min-height: 450px !important;
+    width: 80% !important;
+    display: block !important;
+    margin: 15px auto !important;
 }
 
 footer {
