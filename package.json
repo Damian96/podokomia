@@ -11,11 +11,11 @@
   "scripts": {
     "minifyCSS": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./css/beautified/",
     "minifyJS": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./js/beautified/",
-    "minifyAll": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./css/beautified/ && npm-run minify --template ./../{{filename}}.min.{{ext}} ./js/beautified/"
+    "minifyAll": "npm run minifyCSS && npm run minifyJS"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://damianGiank@bitbucket.org/damianGiank/podokomia.git"
+    "url": "https://damianGiank@bitbucket.org/damianGiank/podokomia.git"
   },
   "author": "Damianos Giankakis",
   "license": "UNLICENSED",

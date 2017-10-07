@@ -1,59 +1,47 @@
 var prevImg = 0,
-    slideImgs = [],
-    lastImg,
+    slideImgs,
     srcs = [
         'images/slideshow-1.jpg',
         'images/slideshow-2.jpg',
         'images/slideshow-3.jpg'
     ],
-    container,
-    imgHeight = 120;
+    container;
 
-$(document).ready(function() {
-    if($(window).innerWidth() <= 980) {
-        $('#slideshow').hide();
-        return true;
-    }
-    container = $('#slideshow');
-    container.height(container.prev().height());
+document.addEventListener('DOMContentLoaded', function() {
+    'use strict';
     var code = '';
-    $.each(srcs, function(index, item) {
-        code += "\n<img class='slide-img' src='" + item + "'/>\n";
-	});
-    container.html(code);
+    container = document.getElementById('slideshow');
+    for(var i=0;i < srcs.length;i++) {
+        code += "\n<img class='slide-img' src='" + srcs[i] + "'/>\n";
+    }
+    container.innerHTML = code;
 
-    slideImgs = $('.slide-img');
-    var heightSum = imgHeight;
-    slideImgs.each(function(index) {
-        $(this).css('z-index', 10 + index + 1);
-        if(index == 1) {
-            $(this).css('top', -imgHeight + 'px');
-        } else if(index > 1) {
-            heightSum += imgHeight;
-            $(this).css('top', -heightSum + 'px');
-        }
+    slideImgs = document.getElementsByClassName('slide-img');
+    Array.from(slideImgs).forEach(function(img) {
+        img.addEventListener('animationend', function(event) {
+            var index;
+            for(var i=0;i < srcs.length;i++) {
+                if(srcs[i] === event.target.getAttribute('src')) {
+                    index = i;
+                    break;
+                }
+            }
+            if(index != null) {
+                if(event.animationName === 'fadeOut') {
+                    event.target.classList.remove('fadeOut');
+                }
+                if(event.animationName === 'fadeIn') {
+                    event.target.classList.remove('fadeIn');
+                    event.target.classList.add('fadeOut');
+                    if((index + 1) <= (slideImgs.length - 1)) {
+                        slideImgs[index + 1].classList.add('fadeIn');
+                    } else {
+                        slideImgs[0].classList.add('fadeIn');
+                    }
+                }
+            }
+            return true;
+        });
     });
-    lastImg = slideImgs.length - 1;
-    
-    setInterval(function() {
-        var s;
-        switch (prevImg) {
-            case lastImg:
-                s = 0;
-                break;
-            default:
-                s = prevImg + 1
-        }
-        slideImgs.eq(prevImg).animate({
-            opacity: 0
-        }, 1500, function() {
-            $(this).css("opacity", "0");
-        });
-        slideImgs.eq(s).animate({
-            opacity: 1
-        }, 1500, function() {
-            $(this).css("opacity", "1");
-        });
-        prevImg = s
-    }, 3000);
-})
+    slideImgs[0].classList.add('fadeIn');
+});

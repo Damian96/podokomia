@@ -14,7 +14,7 @@
 					<p id="email"><span class="icon-paper-plane"></span>vas.zafeirakis@gmail.com</p>
 					<p id="phone"><span class="icon-mobile"></span>6986798497</p>
 				</div>
-				<div id="slideshow">slideshow</div>
+				<center id="slideshow"></center>
 			</div>
 			<div id="main-menu" class="col-sm-12 col-md-12 col-lg-12">
 				<div class="col-sm-12 col-md-3 col-lg-3 <?= (constant('ACTION') === 'homepage') ? 'active' : '' ?>">
