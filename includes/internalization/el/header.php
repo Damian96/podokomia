@@ -1,6 +1,6 @@
 		<header class="col-sm-12 col-md-12 col-lg-12">
 			<div id="lang-control">
-				<?php $links = Functions::getLanguageLinks(ACTION); ?>
+				<?php $links = $functions->getLanguageLinks(ACTION); ?>
 				<a title="Ελληνικά" href="<?=constant('LINK') . '/' . $links[0]?>"><img alt="gr-flag" class="l-img" src="images/gr.jpg"/></a>
 				<a title="Αγγλικά" href="<?=constant('LINK') . '/' . $links[1] ?>"><img alt="uk-flag" class="l-img" src="images/uk.png"/></a>
 			</div>

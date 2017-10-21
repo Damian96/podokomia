@@ -19,7 +19,7 @@ class CookieLanguage {
             $this->value = $_GET['pd_lang'];
             setcookie('pd_lang', $this->value, time() + 432000);
             define('COOKIE', $this->value);
-			$url = Functions::getBaseUrl() . '/index.php';
+			$url = $functions->getBaseUrl() . '/index.php';
 			$url .= (isset($_GET['action']) && !empty($_GET['action'])) ? '?action=' . $_GET['action'] : '';
 			$url .= '&pd_lang' . $this->value;
             header("location:$url");
