@@ -72,7 +72,7 @@ function handleControlClick(event) {
     newImage = originalImages.eq(newIndex);
     modalImg.attr('src', newImage.attr('src'));
     captionText.html(newImage.attr('alt'));
-    // modalContent.attr('href', $(this).attr('src'));
+    modalContent.attr('href', newImage.attr('src'));
     modalImgIndex = newIndex;
     return true;
 }
