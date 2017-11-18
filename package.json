@@ -9,9 +9,9 @@
     "minifier": "^0.8.1"
   },
   "scripts": {
-    "minifyCSS": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./css/beautified/",
-    "minifyJS": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./js/beautified/",
-    "minifyAll": "npm run minifyCSS && npm run minifyJS"
+    "minify-css": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./css/beautified/",
+    "minify-js": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./js/beautified/",
+    "minify": "npm run minifyCSS && npm run minifyJS"
   },
   "repository": {
     "type": "git",
