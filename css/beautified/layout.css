@@ -111,14 +111,25 @@ a {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #aacc14;
     text-align: center;
     border-color: #000;
     border-style: solid
 }
 
+#main-menu > .col-lg-3:not(.active) {
+    background-color: #93B209;
+}
+
+#main-menu > .col-lg-3.active {
+    background-color: #0070FF;
+}
+
 #main-menu>.col-lg-3:hover {
-    background-color: #a6aaad
+    background-color: #d3d3d3;
+}
+
+#main-menu>.col-lg-3:hover > a {
+    color: #000000;
 }
 
 #main-menu a {

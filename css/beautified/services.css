@@ -47,14 +47,19 @@
     background-color: rgba(0,0,0,0.9);
 }
 
-.modal-content {
+.modal-content,
+#modal-controls {
     margin: auto;
     display: block;
     width: 80%;
+}
+
+.modal-content {
     height: 90%;
 }
 
 .modal-content,
+#modal-controls,
 #modImg01 {
     max-width: 700px;
     max-height: 550px;
@@ -86,7 +91,6 @@
 }
 
 #modal-controls {
-    display: block;
     position: relative;
     z-index: 20;
     top: -49%;

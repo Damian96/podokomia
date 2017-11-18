@@ -18,4 +18,4 @@
     <img alt="service-3" src="<?= constant('LINK') . '/images/services-3.jpg' ?>" class="service-img" alt="services-3"/>
     <img alt="service-4" src="<?= constant('LINK') . '/images/services-4.jpg' ?>" class="service-img" alt="services-4"/>
 </div>
-<?php require_once(Functions::getBasePath() . '/includes/serv-modal.php'); ?>
+<?php require_once($functions->getBasePath() . '/includes/serv-modal.php'); ?>

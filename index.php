@@ -2,19 +2,20 @@
     require_once('includes/scripts/functions.php');
     require_once('includes/scripts/language.php');
 
-    Functions::clearPrevCookies();
-    $contentFile = Functions::getActionFile();
+	$functions = new Functions();
+    $functions->clearPrevCookies();
+    $contentFile = $functions->getActionFile();
     define('FILE', $contentFile . '.php');
     define('ACTION', $contentFile);
-	define('LINK', Functions::getBaseUrl());
+	define('LINK', $functions->getBaseUrl());
 
-	if(isset($_GET['action']) && !empty($_GET['action']) && in_array($_GET['action'], Functions::ACTIONS, true)) {
-		define('LANG', Functions::getLanguage($_GET['action']));
+	if(isset($_GET['action']) && !empty($_GET['action']) && in_array($_GET['action'], $functions->actions, true)) {
+		define('LANG', $functions->getLanguage($_GET['action']));
 	} else {
-		define('LANG', Functions::getLanguage('αρχική'));
+		define('LANG', $functions->getLanguage('αρχική'));
 	}
 	
-    define('TITLE', Functions::getTitle(LANG, ACTION));
+    define('TITLE', $functions->getTitle(LANG, ACTION));
 
 	$basePath = './includes/internalization/' . LANG . '/';
 ?>
