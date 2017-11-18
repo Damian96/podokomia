@@ -1,3 +1,9 @@
+/**
+    Primary Color: #193354
+    Secondary Color: #93B209.
+    Tetriary Color: #0070FF.
+*/
+
 body {
     height: 100%;
 }
@@ -73,7 +79,7 @@ header span.icon-mobile {
 body {
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif!important;
-    background-color: #193354!important;
+    background-color: #193354 !important;
     max-height: 1000px;
     overflow-x: hidden
 }
@@ -99,15 +105,15 @@ a {
     padding: 0
 }
 
-#main-menu>.col-lg-3:not(:last-child) {
+#main-menu > .col-lg-3:not(:last-child) {
     border-width: 1px 0 1px 1px
 }
 
-#main-menu>.col-lg-3:last-child {
+#main-menu > .col-lg-3:last-child {
     border-width: 1px
 }
 
-#main-menu>.col-lg-3 {
+#main-menu > .col-lg-3 {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -116,25 +122,21 @@ a {
     border-style: solid
 }
 
-#main-menu > .col-lg-3:not(.active) {
+#main-menu > .col-lg-3:not(.active):not(:hover) {
     background-color: #93B209;
 }
 
-#main-menu > .col-lg-3.active {
+#main-menu > .col-lg-3.active:not(:hover) {
     background-color: #0070FF;
 }
 
-#main-menu>.col-lg-3:hover {
-    background-color: #d3d3d3;
-}
-
-#main-menu>.col-lg-3:hover > a {
-    color: #000000;
+#main-menu > .col-lg-3:hover {
+    background-color: #a6aaad;
 }
 
 #main-menu a {
     display: block;
-    color: #fff;
+    color: #000;
     height: 100%;
     padding: 5px 0;
     font-size: 19px

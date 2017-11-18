@@ -1,3 +1,4 @@
+                <h1>Contact</h1>
                 <div itemscope itemtype="http://www.podokomia.eu/contact.php/Person">
                     <p>
                         <span class="icon-mobile"></span>

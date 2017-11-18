@@ -1,5 +1,5 @@
 <div class="section" id="avail-services">
-	<div>Services</div>
+	<h1>Services</h1>
 	<ul>
 		<li>Fertility Management with ultrasound scanner</li>
 		<li>Impaired Cow Care</li>
