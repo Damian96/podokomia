@@ -10,7 +10,8 @@
 	<?php } ?>
 	<meta name="description" content="Vasilis Zafeirakis is a Veterinarian that lives in Thessaloniki, Greece and works as a Cattle Hoof Trimmer."/>
     <meta charset="utf-8"/>
-    <meta name="robots" content="index,follow,noodp"/>
+    <meta name="robots" content="index,follow,noodp"/
+    <meta http-equiv="cache-control" content="max-age=86400" />
     <meta name="googlebot" content="index,follow"/>
     <meta name="google" content="translate" />
 	<meta http-equiv="Cache-control" content="public">

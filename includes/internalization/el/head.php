@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?= constant('LINK') ?>/css/podokomia-icons.min.css" />
     <meta name="description" content="Βασίλης Ζαφειράκης κτηνίατρος  παραγωγικών ζώων, νύχια / εξονυχισμό αγελάδων, Θεσσαλονίκη. κτηνιατρος μεγαλων και παραγωγικων ζωων θεσσαλονικη"/>
     <meta charset="utf-8"/>
-	<meta http-equiv="cache-control" content="max-age=1296000" />
+	<meta http-equiv="cache-control" content="max-age=86400" />
     <meta name="robots" content="index,follow,noodp"/>
     <meta name="googlebot" content="index,follow"/>
     <meta name="google" content="translate" />
