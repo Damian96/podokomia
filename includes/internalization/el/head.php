@@ -1,12 +1,10 @@
 <head>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title><?=constant('TITLE')?></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="<?= constant('LINK') ?>/css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="<?= constant('LINK') ?>/css/layout.min.css" />
     <link rel="stylesheet" href="<?= constant('LINK') ?>/css/slideshow.min.css" />
     <link rel="stylesheet" href="<?= constant('LINK') ?>/css/podokomia-icons.min.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
     <meta name="description" content="Βασίλης Ζαφειράκης κτηνίατρος  παραγωγικών ζώων, νύχια / εξονυχισμό αγελάδων, Θεσσαλονίκη. κτηνιατρος μεγαλων και παραγωγικων ζωων θεσσαλονικη"/>
     <meta charset="utf-8"/>
 	<meta http-equiv="cache-control" content="max-age=1296000" />

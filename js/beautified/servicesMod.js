@@ -1,89 +1,138 @@
-var originalImages, modal, modalContent, modalImg, captionText, modalImgIndex;
+var originalImages,
+    modal,
+    modalContent,
+    modalImg,
+    captionText,
+    modalImgIndex,
+    getIndexOfClickedImg = function(src) {
 
-$(window).on('load', function() {
-    modal = $('#servImgModal');
-    modalContent = modal.find('.modal-content');
-    modalImg = $("#modImg01");
-    captionText = $("#modCaption")
-    originalImages = $('.service-img');
-    var span = modal.find('.close');
+        var number;
 
-    originalImages.click(function() {
-        modal.show();
-        modalImgIndex = getIndexOfClickedImg($(this).attr('src'));
-        $(window).on('keydown', escapeModal);
-        modalContent.attr('href', $(this).attr('src'));
-        modalImg.attr('src', $(this).attr('src'));
-        captionText.html($(this).attr('alt'));
-        setTimeout(function() {
-            $('body').on('click', destroyModal);
-        }, 0);
-    });
+        Array.from(originalImages).forEach(function(image, index) {
 
-    span.click(function() {
-        hideModal();
-    });
+            if(image.src == src) {
 
-    modal.find('.glyphicon').click(handleControlClick);
-});
+                number = index;
+                return false;
 
-function escapeModal(event) {
-    if(event.keyCode == 27) {
-        hideModal();
-    }
-    return true;
-}
+            }
 
-function destroyModal(event) {
-    if((event.target.id !== 'modImg01') && (event.target.id !== 'modCaption')) {
-        if((event.target.id !== 'modal-controls') && !event.target.classList.contains('glyphicon')) {
+        });
+
+        return number;
+
+    },
+    escapeModal = function(event) {
+
+        if(event.keyCode == 27) {
+
             hideModal();
+
         }
-    }
-}
+    },
+    destroyModal = function(event) {
 
-function hideModal() {
-    modal.hide();
-    $(window).off('keydown', escapeModal);
-    $('body').off('click', destroyModal);
-    modalContent.attr('href', '');
-    modalImg.attr('src', '');
-    captionText.html('');
-}
+        if(event.type == 'keydown' && event.keyCode == 27) {
 
-function handleControlClick(event) {
-    var newIndex, newImage,
-        length = originalImages.length - 1;
-    if(event.target.classList.contains('glyphicon-arrow-left')) {
-        if((modalImgIndex - 1) >= 0) {
-            newIndex = modalImgIndex - 1;
+            hideModal();
+
+        } else if(event.type == 'click') {
+
+            if((event.target.id != 'modImg01') && (event.target.id != 'modCaption') && (event.target.id != 'modal-controls') && !event.target.classList.contains('glyphicon')) {
+
+                hideModal();
+
+            }
+        }
+
+        return false;
+
+    },
+    handleControlClick = function(event) {
+
+        var newIndex,
+            newImage,
+            length = originalImages.length - 1;
+
+        if(event.target.classList.contains('glyphicon-arrow-left')) {
+
+            if((modalImgIndex - 1) >= 0) {
+
+                newIndex = modalImgIndex - 1;
+
+            } else {
+
+                newIndex = length;
+
+            }
+
+        } else if(event.target.classList.contains('glyphicon-arrow-right')) {
+
+            if((modalImgIndex + 1) <= length) {
+
+                newIndex = modalImgIndex + 1;
+
+            } else {
+
+                newIndex = 0;
+
+            }
+
         } else {
-            newIndex = length;
+            return true;
         }
-    } else if(event.target.classList.contains('glyphicon-arrow-right')) {
-        if((modalImgIndex + 1) <= length) {
-            newIndex = modalImgIndex + 1;
-        } else {
-            newIndex = 0;
-        }
-    } else {
-        return;
-    }
-    newImage = originalImages.eq(newIndex);
-    modalImg.attr('src', newImage.attr('src'));
-    captionText.html(newImage.attr('alt'));
-    modalContent.attr('href', newImage.attr('src'));
-    modalImgIndex = newIndex;
-    return true;
-}
 
-function getIndexOfClickedImg(src) {
-    var number;
-    originalImages.each(function() {
-        if($(this).attr('src') === src) {
-            number = $(this).index();
-            return false;
-        }
+        newImage = originalImages[newIndex];
+        modalImg.src = newImage.src;
+        captionText.innerText = newImage.alt;
+        modalContent.href = newImage.src;
+        modalImgIndex = newIndex;
+
+        return true;
+
+    },
+    hideModal = function() {
+
+        modal.style.display = 'none';
+        window.removeEventListener('keydown', destroyModal);
+        modal.removeEventListener('click', destroyModal);
+        modalContent.href = modalContent.src = captionText.innerText = '';
+
+    };
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    var span = document.querySelector('#servImgModal .close'),
+        modalControls = document.querySelectorAll('#servImgModal .glyphicon');
+
+    modal = document.getElementById('servImgModal');
+    modalContent = document.querySelector('#servImgModal .modal-content');
+    modalImg = document.getElementById('modImg01');
+    captionText = document.getElementById('modCaption');
+    originalImages = document.getElementsByClassName('service-img');
+
+    Array.from(originalImages).forEach(function(image) {
+
+        image.addEventListener('click', function() {
+
+            modal.addEventListener('click', destroyModal, { once: true });
+            window.addEventListener('keydown', destroyModal, { once: true });
+            modal.style.display = 'block';
+            modalImgIndex = getIndexOfClickedImg(this.src);
+            modalContent.href = this.src;
+            modalImg.src = this.src;
+            captionText.innerText = this.alt;
+
+        });
+
     });
-    return number;
-}
+
+    span.onclick = hideModal;
+
+    Array.from(modalControls).forEach(function(icon) {
+
+        icon.onclick = handleControlClick;
+
+    });
+
+});

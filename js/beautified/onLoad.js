@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     'use strict';
 
     setTimeout(function() {
-
+        'use strict';
         var aside = document.querySelector('aside'),
-        contentHeight;
+            contentHeight;
 
         if(window.innerWidth <= 980) {
             contentHeight = aside.offsetHeight + aside.nextElementSibling.offsetHeight;

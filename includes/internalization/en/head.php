@@ -1,12 +1,10 @@
 <head>
     <link rel="icon" href="<?= constant('LINK') ?>/favicon.ico" type="image/x-icon" />
     <title><?=constant('TITLE')?></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="<?= constant('LINK') ?>/css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="<?= constant('LINK') ?>/css/layout.min.css" />
     <link rel="stylesheet" href="<?= constant('LINK') ?>/css/slideshow.min.css" />
     <link rel="stylesheet" href="<?= constant('LINK') ?>/css/podokomia-icons.min.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
     <?php if(($_SERVER['SERVER_NAME'] !== 'localhost') && (strpos($_SERVER['SERVER_NAME'], '192.168.1') == -1)) { ?>
     <script>!function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-74692550-9","auto"),ga("send","pageview");</script>
 	<?php } ?>
@@ -31,6 +29,5 @@
     <link rel="stylesheet" media="(min-width : 1221px) and (max-width : 1440px)" href="<?= constant('LINK') ?>/css/1220-1440.min.css" />
     <link rel="stylesheet" media="(min-width : 1441px) and (max-width : 1824px)" href="<?= constant('LINK') ?>/css/1440-1824.min.css" />
     <link rel="stylesheet" media="(min-width : 1825px)" href="<?= constant('LINK') ?>/css/min-1824.min.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="<?= constant('LINK') ?>/js/twitter-widj.min.js"></script>
 </head>

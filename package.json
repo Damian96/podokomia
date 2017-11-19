@@ -5,13 +5,10 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "npm-run": "^4.1.2",
-    "minifier": "^0.8.1"
+    "node-minify-watch": "^1.0.1"
   },
   "scripts": {
-    "minify-css": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./css/beautified/",
-    "minify-js": "npm-run minify --template ./../{{filename}}.min.{{ext}} ./js/beautified/",
-    "minify": "npm run minifyCSS && npm run minifyJS"
+    "minify-watch": "node ./node-scripts/minify-watch.js"
   },
   "repository": {
     "type": "git",
