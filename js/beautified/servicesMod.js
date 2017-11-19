@@ -102,37 +102,41 @@ var originalImages,
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    var span = document.querySelector('#servImgModal .close'),
+    if(document.querySelector('main').classList.contains('services')) {
+
+        var span = document.querySelector('#servImgModal .close'),
         modalControls = document.querySelectorAll('#servImgModal .glyphicon');
 
-    modal = document.getElementById('servImgModal');
-    modalContent = document.querySelector('#servImgModal .modal-content');
-    modalImg = document.getElementById('modImg01');
-    captionText = document.getElementById('modCaption');
-    originalImages = document.getElementsByClassName('service-img');
+        modal = document.getElementById('servImgModal');
+        modalContent = document.querySelector('#servImgModal .modal-content');
+        modalImg = document.getElementById('modImg01');
+        captionText = document.getElementById('modCaption');
+        originalImages = document.getElementsByClassName('service-img');
 
-    Array.from(originalImages).forEach(function(image) {
+        Array.from(originalImages).forEach(function(image) {
 
-        image.addEventListener('click', function() {
+            image.addEventListener('click', function() {
 
-            modal.addEventListener('click', destroyModal, { once: true });
-            window.addEventListener('keydown', destroyModal, { once: true });
-            modal.style.display = 'block';
-            modalImgIndex = getIndexOfClickedImg(this.src);
-            modalContent.href = this.src;
-            modalImg.src = this.src;
-            captionText.innerText = this.alt;
+                modal.addEventListener('click', destroyModal, { once: true });
+                window.addEventListener('keydown', destroyModal, { once: true });
+                modal.style.display = 'block';
+                modalImgIndex = getIndexOfClickedImg(this.src);
+                modalContent.href = this.src;
+                modalImg.src = this.src;
+                captionText.innerText = this.alt;
+
+            });
 
         });
 
-    });
+        span.onclick = hideModal;
 
-    span.onclick = hideModal;
+        Array.from(modalControls).forEach(function(icon) {
 
-    Array.from(modalControls).forEach(function(icon) {
+            icon.onclick = handleControlClick;
 
-        icon.onclick = handleControlClick;
+        });
 
-    });
+    }
 
 });

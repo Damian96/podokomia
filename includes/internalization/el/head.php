@@ -3,6 +3,7 @@
     <title><?=constant('TITLE')?></title>
     <link rel="stylesheet" href="<?= constant('LINK') ?>/css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="<?= constant('LINK') ?>/css/layout.min.css" />
+    <link rel="stylesheet" href="<?= constant('LINK') ?>/css/extra-small.min.css" />
     <link rel="stylesheet" href="<?= constant('LINK') ?>/css/slideshow.min.css" />
     <link rel="stylesheet" href="<?= constant('LINK') ?>/css/podokomia-icons.min.css" />
     <meta name="description" content="Βασίλης Ζαφειράκης κτηνίατρος  παραγωγικών ζώων, νύχια / εξονυχισμό αγελάδων, Θεσσαλονίκη. κτηνιατρος μεγαλων και παραγωγικων ζωων θεσσαλονικη"/>
@@ -31,5 +32,6 @@
 	<script src="<?= constant('LINK') ?>/js/twitter-widj.min.js"></script>
     <?php if(($_SERVER['SERVER_NAME'] !== 'localhost') && (strpos($_SERVER['SERVER_NAME'], '192.168.1') == -1)) { ?>
     <script>!function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-74692550-9","auto"),ga("send","pageview");</script>
-	<?php } ?>
+    <?php } ?>
+    <script type="text/javascript" src="js/mobileMenu.min.js"></script>
 </head>
