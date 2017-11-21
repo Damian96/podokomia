@@ -3,21 +3,30 @@
     require_once('includes/scripts/language.php');
 
 	$functions = new Functions();
-    $functions->clearPrevCookies();
+
+    $functions->clearOldCookies();
     $contentFile = $functions->getActionFile();
     define('FILE', $contentFile . '.php');
     define('ACTION', $contentFile);
-	define('LINK', $functions->getBaseUrl());
+	define('BASEURL', $functions->getBaseUrl());
+	define('BASEPATH', $functions->getBasePath());
+	define('LANGUAGE_LINKS', $functions->getLanguageLinks(constant('ACTION')));
 
-	if(isset($_GET['action']) && !empty($_GET['action']) && in_array($_GET['action'], $functions->actions, true)) {
-		define('LANG', $functions->getLanguage($_GET['action']));
+	if(isset($_GET['action']) && !empty($_GET['action']) && in_array($_GET['action'], $functions->actions)) {
+
+		$language = new Language($functions->getActionLanguage($_GET['action']));
+
 	} else {
-		define('LANG', $functions->getLanguage('αρχική'));
-	}
-	
-    define('TITLE', $functions->getTitle(LANG, ACTION));
 
-	$basePath = './includes/internalization/' . LANG . '/';
+		$language = new Language('gr');
+
+	}
+
+	define('LANG', $language->getLanguage());
+	define('COOKIE', constant('LANG'));
+	define('TITLE', $functions->getTitle(constant('LANG'), constant('ACTION')));
+
+	$basePath = './includes/internalization/' . constant('LANG') . '/';
 ?>
 <!DOCTYPE html>
 <html lang="<?=LANG?>">
@@ -25,11 +34,11 @@
 <body>
 	<div id="wrapper" class="col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
 <?php require_once($basePath . "header.php"); ?>
-        <script src="<?= LINK . '/js/slideshow.min.js' ?>"></script>
+        <script src="<?= BASEURL . '/js/slideshow.min.js' ?>"></script>
 		<main id="main" class="<?= ACTION ?>">
 			<aside id="sibebar" class="col-xm-12 col-sm-12 col-md-3 col-lg-3">
 <?php require_once($basePath . "sidebar.php"); ?>
-				
+
 				<div id="fb-root"></div>
 				<script type="text/javascript">(function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0];
@@ -39,14 +48,14 @@
 				fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));</script>
 			</aside>
-			<div id="content" class="col-xm-12 col-sm-12 col-md-9 col-lg-9">			
+			<div id="content" class="col-xm-12 col-sm-12 col-md-9 col-lg-9">
 <?php require_once($basePath . constant('FILE')); ?>
-			
+
 			</div>
 		</main>
 	</div>
 <?php require_once($basePath . "footer.php"); ?>
-	<script src="<?= LINK . '/js/servicesMod.min.js' ?>"></script>
-	<script src="<?= LINK . '/js/onLoad.min.js' ?>"></script>
+	<script src="<?= BASEURL . '/js/servicesMod.min.js' ?>"></script>
+	<script src="<?= BASEURL . '/js/onLoad.min.js' ?>"></script>
 </body>
 </html>

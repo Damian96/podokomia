@@ -1,29 +1,40 @@
 <?php
-class CookieLanguage {
+class Language {
+
     public $languages = [
-        'el',
+        'gr',
         'en',
     ];
-    public $value = 'el';
+    public $activeLanguage = 'gr';
 
-    function __construct() {
-        if(!isset($_GET['pd_lang']) || empty($_GET['pd_lang']) || !in_array($_GET['pd_lang'], $this->languages)) {
-            if(!isset($_COOKIE['pd_lang']) || empty($_COOKIE['pd_lang']) || !in_array($_COOKIE['pd_lang'], $this->languages)) {
-                $this->value = 'el';
-                setcookie('pd_lang', $this->value, time() + 432000);
-            } else {
-                $this->value = $_COOKIE['pd_lang'];
+    function __construct($actionLanguage) {
+
+        if(!isset($_GET['language']) || empty($_GET['language']) || !in_array($_GET['language'], $this->languages)) {
+
+            if(!empty($actionLanguage)) {
+
+                $this->activeLanguage = $actionLanguage;
+
+            } else if(!isset($_COOKIE['language']) || empty($_COOKIE['language']) || !in_array($_COOKIE['language'], $this->languages)) {
+
+                $this->activeLanguage = $_COOKIE['language'];
+
             }
-            define('COOKIE', $this->value);
-        } else {
-            $this->value = $_GET['pd_lang'];
-            setcookie('pd_lang', $this->value, time() + 432000);
-            define('COOKIE', $this->value);
-			$url = $functions->getBaseUrl() . '/index.php';
-			$url .= (isset($_GET['action']) && !empty($_GET['action'])) ? '?action=' . $_GET['action'] : '';
-			$url .= '&pd_lang' . $this->value;
-            header("location:$url");
+
+        } else if(!empty($_GET['language']) && in_array($_GET['language'], $this->languages)) {
+
+            $this->activeLanguage = $_GET['language'];
+
         }
+
+        setcookie('language', $this->activeLanguage, time() + 432000);
+
+    }
+
+    function getLanguage() {
+
+        return $this->activeLanguage;
+
     }
 }
 ?>
