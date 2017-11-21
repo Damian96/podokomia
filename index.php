@@ -28,7 +28,7 @@
 	$basePath = './includes/internalization/' . constant('LANG') . '/';
 ?>
 <!DOCTYPE html>
-<html lang="<?=LANG?>">
+<html lang="<?= LANG === 'gr' ? 'el' : 'en' ?>">
 <?php require_once($basePath . "head.php"); ?>
 <body>
 	<div id="wrapper" class="col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
