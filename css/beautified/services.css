@@ -96,18 +96,18 @@
     top: -49%;
 }
 
-#modal-controls .glyphicon {
+#modal-controls [class^="icon"] {
     position: relative;
     color: #7e7e7e;
     text-shadow: 1px 1px rgb(0, 0, 0);
     cursor: pointer;
 }
 
-#modal-controls .glyphicon-arrow-left {
+#modal-controls .icon-arrow-left {
     left: 0px;
 }
 
-#modal-controls .glyphicon-arrow-right {
+#modal-controls .icon-arrow-right {
     left: 94.5%;
 }
 

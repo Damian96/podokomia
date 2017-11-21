@@ -4,8 +4,8 @@
         <img id="modImg01">
     </a>
     <div id="modal-controls">
-        <span class="glyphicon glyphicon-arrow-left" title="Previous Photo"></span>
-        <span class="glyphicon glyphicon-arrow-right" title="Next Photo"></span>
+        <span class="icon-arrow-left" title="Previous Photo"></span>
+        <span class="icon-arrow-right" title="Next Photo"></span>
     </div>
     <div id="modCaption"></div>
 </div>
