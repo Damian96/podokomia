@@ -31,4 +31,5 @@
     <link rel="stylesheet" media="(min-width : 1441px) and (max-width : 1824px)" href="<?= constant('BASEURL') ?>/css/1440-1824.min.css" />
     <link rel="stylesheet" media="(min-width : 1825px)" href="<?= constant('BASEURL') ?>/css/min-1824.min.css" />
 	<script src="<?= constant('BASEURL') ?>/js/twitter-widj.min.js"></script>
+    <meta name="google-site-verification" content="JVBFzUZhTGBX1Xfb4mIoYLrYg9cJskVOMv41S97pF8M" />
 </head>

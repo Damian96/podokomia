@@ -1,34 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<url>
-		<loc>http://www.podokomia.eu/</loc>
-		<xhtml:link  rel="alternate" hreflang="el" href="http://www.podokomia.eu/αρχική" />
-		<xhtml:link  rel="alternate" hreflang="el" href="http://www.podokomia.eu/index.php" />
-		<xhtml:link  rel="alternate" hreflang="el" href="http://www.podokomia.eu/index.php?action=αρχική" />
-		<xhtml:link  rel="alternate" hreflang="en" href="http://www.podokomia.eu/homepage" />
-		<xhtml:link  rel="alternate" hreflang="en" href="http://www.podokomia.eu/?action=homepage" />
-		<xhtml:link rel="alternate" hreflang="en" href="http://www.podokomia.eu/?action=index" />
+		<loc>http://www.podokomia.eu/index.php?action=homepage</loc>
+		<xhtml:link  rel="alternate" hreflang="el" href="http://www.podokomia.eu/gr/αρχική" />
+		<xhtml:link  rel="alternate" hreflang="en" href="http://www.podokomia.eu/en/homepage" />
 		<lastmod>2017-05-08</lastmod>
 	</url>
 	<url>
-		<loc>http://www.podokomia.eu/υπηρεσίες</loc>
-		<xhtml:link  rel="alternate" hreflang="el" href="http://www.podokomia.eu/index.php?action=υπηρεσίες" />
-		<xhtml:link  rel="alternate" hreflang="en" href="http://www.podokomia.eu/services" />
-		<xhtml:link  rel="alternate" hreflang="en" href="http://www.podokomia.eu/?action=services" />
+		<loc>http://www.podokomia.eu/index.php?action=services</loc>
+		<xhtml:link  rel="alternate" hreflang="el" href="http://www.podokomia.eu/gr/υπηρεσίες" />
+		<xhtml:link  rel="alternate" hreflang="en" href="http://www.podokomia.eu/en/services" />
 		<lastmod>2017-05-08</lastmod>
 	</url>
 	<url>
-		<loc>http://www.podokomia.eu/άρθρα</loc>
-		<xhtml:link  rel="alternate" hreflang="el" href="http://www.podokomia.eu/index.php?action=άρθρα" />
-		<xhtml:link  rel="alternate" hreflang="en" href="http://www.podokomia.eu/articles" />
-		<xhtml:link  rel="alternate" hreflang="en" href="http://www.podokomia.eu/?action=articles" />
+		<loc>http://www.podokomia.eu/index.php?action=articles</loc>
+		<xhtml:link  rel="alternate" hreflang="el" href="http://www.podokomia.eu/gr/άρθρα" />
+		<xhtml:link  rel="alternate" hreflang="en" href="http://www.podokomia.eu/en/articles" />
 		<lastmod>2017-05-08</lastmod>
 	</url>
 	<url>
-		<loc>http://www.podokomia.eu/επικοινωνία</loc>
-		<xhtml:link  rel="alternate" hreflang="el" href="http://www.podokomia.eu/index.php?action=επικοινωνία" />
-		<xhtml:link  rel="alternate" hreflang="en" href="http://www.podokomia.eu/contact" />
-		<xhtml:link  rel="alternate" hreflang="en" href="http://www.podokomia.eu/?action=contact" />
+		<loc>http://www.podokomia.eu/index.php?action=contact</loc>
+		<xhtml:link  rel="alternate" hreflang="el" href="http://www.podokomia.eu/gr/επικοινωνία" />
+		<xhtml:link  rel="alternate" hreflang="en" href="http://www.podokomia.eu/en/contact" />
 		<lastmod>2017-05-08</lastmod>
 	</url>
 </urlset>

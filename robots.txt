@@ -12,4 +12,4 @@ Disallow: /downloads
 
 User-agent: Googlebot-Image/1.0
 
-Disallow: /images
+Disallow: /

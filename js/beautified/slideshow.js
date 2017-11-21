@@ -6,22 +6,64 @@ var prevImg = 0,
         'images/slideshow-3.jpg'
     ],
     baseURL,
-    container;
+    container,
+    slideNextImage = function(event) {
+
+        var imageIndex;
+
+        srcs.forEach(function(item, index) {
+
+            if(item == this.src) {
+                imageIndex = index;
+                return false;
+            }
+
+        }.bind(this));
+
+        if(imageIndex != null) {
+
+            if(event.animationName == 'fadeOut') {
+
+                this.classList.remove('fadeOut');
+
+            }
+
+            if(event.animationName == 'fadeIn') {
+
+                this.classList.remove('fadeIn');
+                this.classList.add('fadeOut');
+
+                if((imageIndex + 1) <= (slideImgs.length - 1)) {
+
+                    slideImgs[imageIndex + 1].classList.add('fadeIn');
+
+                } else {
+
+                    slideImgs[0].classList.add('fadeIn');
+
+                }
+
+            }
+
+        }
+
+        return true;
+
+    };
 
 document.addEventListener('DOMContentLoaded', function() {
-
-    'use strict';
 
     var code = '';
 
     container = document.getElementById('slideshow');
     baseURL = container.dataset.baseUrl;
 
-    for(var i=0;i < srcs.length;i++) {
+    srcs.forEach(function(item, index) {
 
-        code += "\n<img class='slide-img' src='" + baseURL + '/' + srcs[i] + "'/>\n";
+        srcs[index] = baseURL + '/' + item;
+        code += "\n<img class='slide-img' src='" + srcs[index] + "'/>\n";
 
-    }
+    });
 
     container.innerHTML = code;
 
@@ -29,51 +71,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     Array.from(slideImgs).forEach(function(img) {
 
-        img.addEventListener('animationend', function(event) {
-
-            var index;
-
-            for(var i=0;i < srcs.length;i++) {
-
-                if(srcs[i] === event.target.getAttribute('src')) {
-
-                    index = i;
-                    break;
-
-                }
-
-            }
-
-            if(index != null) {
-
-                if(event.animationName === 'fadeOut') {
-
-                    event.target.classList.remove('fadeOut');
-
-                }
-
-                if(event.animationName === 'fadeIn') {
-
-                    event.target.classList.remove('fadeIn');
-                    event.target.classList.add('fadeOut');
-
-                    if((index + 1) <= (slideImgs.length - 1)) {
-
-                        slideImgs[index + 1].classList.add('fadeIn');
-
-                    } else {
-
-                        slideImgs[0].classList.add('fadeIn');
-
-                    }
-
-                }
-
-            }
-
-            return true;
-
-        });
+        img.addEventListener('animationend', slideNextImage);
+        img.addEventListener('webkitAnimationEnd', slideNextImage);
+        img.addEventListener('oAnimationEnd', slideNextImage);
+        img.addEventListener('msAnimationEnd', slideNextImage);
 
     });
 

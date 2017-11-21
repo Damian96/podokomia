@@ -17,8 +17,9 @@
 				</div>
 			</div>
 			<div id="lang-control">
-				<a title="Ελληνικά" href="<?= constant('BASEURL') ?>/gr/<?= constant('LANGUAGE_LINKS')['gr'] ?>"><img alt="gr-flag" class="l-img" src="<?= constant('BASEURL') ?>/images/gr.jpg"/></a>
-				<a title="Αγγλικά" href="<?= constant('BASEURL') ?>/en/<?= constant('LANGUAGE_LINKS')['en'] ?>"><img alt="uk-flag" class="l-img" src="<?= constant('BASEURL') ?>/images/uk.png"/></a>
+				<?php $links = $functions->getLanguageLinks(constant('ACTION')); ?>
+				<a title="Ελληνικά" href="<?= constant('BASEURL') ?>/gr/<?= $links['gr'] ?>"><img alt="gr-flag" class="l-img" src="<?= constant('BASEURL') ?>/images/gr.jpg"/></a>
+				<a title="Αγγλικά" href="<?= constant('BASEURL') ?>/en/<?= $links['en'] ?>"><img alt="uk-flag" class="l-img" src="<?= constant('BASEURL') ?>/images/uk.png"/></a>
 			</div>
 			<div id="clues" class="col-sm-12 col-md-6 col-lg-6">
 				<h2 id="name">Βασίλης Ζαφειράκης</h2>

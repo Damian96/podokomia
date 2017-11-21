@@ -10,7 +10,6 @@
     define('ACTION', $contentFile);
 	define('BASEURL', $functions->getBaseUrl());
 	define('BASEPATH', $functions->getBasePath());
-	define('LANGUAGE_LINKS', $functions->getLanguageLinks(constant('ACTION')));
 
 	if(isset($_GET['action']) && !empty($_GET['action']) && in_array($_GET['action'], $functions->actions)) {
 
