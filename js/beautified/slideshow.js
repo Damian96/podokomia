@@ -13,7 +13,8 @@ var prevImg = 0,
 
         srcs.forEach(function(item, index) {
 
-            if(item == this.src) {
+            var url = baseURL + '/' + item;
+            if(url == this.src) {
                 imageIndex = index;
                 return false;
             }
@@ -60,8 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     srcs.forEach(function(item, index) {
 
-        srcs[index] = baseURL + '/' + item;
-        code += "\n<img class='slide-img' src='" + srcs[index] + "'/>\n";
+        item = baseURL + '/' + item;
+        code += "\n<img class='slide-img' src='" + item + "'";
+        code += " alt='image of cows in slideshow " + index + "1'/>\n";
 
     });
 
@@ -80,4 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     slideImgs[0].classList.add('fadeIn');
 
+}, {
+    once: true
 });

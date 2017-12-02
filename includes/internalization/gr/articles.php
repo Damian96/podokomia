@@ -1,5 +1,5 @@
 				<div class="col-sm-12 col-lg-6 col-md-6">
-					<a href="<?= constant('BASEURL') ?>/images/articles-1.jpg" target="_blank" title="Locomotion scoring of dairy cattle"><img alt="locomotion-scoring-of-dairy-cattle" src="<?= constant('BASEURL') ?>/images/articles-1.jpg" /></a>
+					<img class="modal-image" alt="locomotion-scoring-of-dairy-cattle" src="<?= constant('BASEURL') ?>/images/articles-1.jpg" />
 				</div>
 				<div class="col-sm-12 col-md-6 col-lg-6">
 					<h1>Άρθρα</h1>
@@ -13,3 +13,4 @@
 						<span class="icon-file-pdf"></span><a href="downloads/cow-lameness-2.pdf" download="downloads/cow-lameness-2.pdf"><p>ΧΩΛΟΤΗΤΕΣ ΑΓΕΛΑΔΩΝ 2</p></a>
 					</div>
 				</div>
+<?php require_once(constant('BASEPATH') . '/includes/image-modal.php'); ?>

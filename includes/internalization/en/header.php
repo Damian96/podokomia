@@ -1,13 +1,13 @@
 		<header class="col-sm-12 col-md-12 col-lg-12">
 			<div id="lang-control">
 				<?php $links = $functions->getLanguageLinks(constant('ACTION')); ?>
-				<a title="Greek" href="<?= constant('BASEURL') ?>/gr/<?= $links['gr'] ?>"><img alt="gr-flag" class="l-img" src="<?= constant('BASEURL') ?>/images/gr.jpg"/></a>
-				<a title="English (UK)" href="<?= constant('BASEURL') ?>/en/<?= $links['en'] ?>"><img alt="uk-flag" class="l-img" src="<?= constant('BASEURL') ?>/images/uk.png"/></a>
+				<a title="Greek" href="<?= constant('BASEURL') ?>/gr/<?= $links['gr'] ?>"><img alt="image of the Greek flag" class="l-img" src="<?= constant('BASEURL') ?>/images/gr.jpg"/></a>
+				<a title="English (UK)" href="<?= constant('BASEURL') ?>/en/<?= $links['en'] ?>"><img alt="image of United Kingdom's flag" class="l-img" src="<?= constant('BASEURL') ?>/images/uk.png"/></a>
 			</div>
 			<div id="clues" class="col-sm-12 col-md-6 col-lg-6">
 				<h2 id="name">Vasilis Zafeirakis</h2>
 				<p id="prof">Veterinarian</p>
-				<img alt="veterinarian-logo" id="logo" src="<?= constant('BASEURL') ?>/images/logo.jpg" alt="vent logo"/>
+				<img alt="veterinarian-logo" id="logo" src="<?= constant('BASEURL') ?>/images/logo.jpg"/>
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-6 text-center">
 				<div id="info">
