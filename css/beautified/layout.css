@@ -5,7 +5,12 @@
 */
 
 body {
+    padding: 0;
     height: 100%;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    background-color: #193354 !important;
+    max-height: 1000px;
+    overflow-x: hidden
 }
 
 img {
@@ -74,14 +79,6 @@ header span.icon-mobile {
 
 #clues {
     text-align: center
-}
-
-body {
-    padding: 0;
-    font-family: 'Source Sans Pro', sans-serif!important;
-    background-color: #193354 !important;
-    max-height: 1000px;
-    overflow-x: hidden
 }
 
 a {
