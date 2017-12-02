@@ -6,5 +6,5 @@
 					Δραστηριοποιείται στη Θεσσαλονίκη και στις γύρω περιοχές.
 				</p>
 				<p>
-					<img id="home-img" alt="main-page-cow-image" src="<?= constant('BASEURL') ?>/images/home.jpg"/>
+					<img id="home-img" alt="main-page-cow-image" src="<?php echo constant('BASEURL') ?>/images/home.jpg"/>
 				</p>
