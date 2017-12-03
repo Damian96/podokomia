@@ -1,5 +1,5 @@
 				<div class="col-sm-12 col-lg-6 col-md-6">
-					<img class="modal-image" alt="locomotion-scoring-of-dairy-cattle" src="<?php echo constant('BASEURL') ?>/images/articles-1.jpg" />
+					<img class="modal-image" alt="image of locomotion scoring of dairy cattle" src="<?php echo constant('BASEURL') ?>/images/articles-1.jpg" />
 				</div>
 				<div class="col-sm-12 col-md-6 col-lg-6">
 					<h1>Articles</h1>

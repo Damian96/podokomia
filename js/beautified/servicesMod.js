@@ -46,6 +46,17 @@ var originalImages,
         return true;
 
     },
+    arrangeModalImage = function() {
+
+        if(this.offsetHeight < modalContent.offsetHeight) {
+
+            modalContent.style.paddingTop = ((modalContent.offsetHeight - this.offsetHeight) / 2) + 'px';
+
+        }
+
+        modalImg.style.opacity = 1;
+
+    },
     handleControlClick = function(event) {
 
         var newIndex,
@@ -80,21 +91,14 @@ var originalImages,
             return true;
         }
 
+        modalImg.style.opacity = 0;
+        modalContent.style.paddingTop = '';
         newImage = originalImages[newIndex];
-        modalImg.addEventListener('load', function() {
-
-            if(this.offsetHeight < modalContent.offsetHeight) {
-
-                modalContent.style.paddingTop = ((modalContent.offsetHeight - this.offsetHeight) / 2) + 'px';
-
-            }
-
-        }, {
-            once: true
-        });
+        modalImg.addEventListener('load', arrangeModalImage, { once: true });
         modalImg.src = newImage.src;
         captionText.innerText = newImage.alt;
         modalContent.href = newImage.src;
+        modalContent.title = newImage.alt;
         modalImgIndex = newIndex;
 
         return true;
@@ -106,7 +110,7 @@ var originalImages,
         window.removeEventListener('keydown', destroyModal);
         modal.removeEventListener('click', destroyModal);
         modalContent.href = modalContent.src = captionText.innerText = '';
-        modalImg.style.paddingTop = '';
+        modalContent.style.paddingTop = '';
 
     },
     arrangeIcons = function() {
@@ -120,9 +124,13 @@ var originalImages,
             value.style.top = top + 'px';
 
             if(value.classList.contains('icon-arrow-left')) {
+
                 value.style.left = left + 'px';
+
             } else {
+
                 value.style.left = (left + modalContent.offsetWidth - value.offsetWidth) + 'px';
+
             }
 
         })
@@ -149,22 +157,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 modal.addEventListener('click', destroyModal);
                 window.addEventListener('keydown', destroyModal, { once: true });
                 modal.style.display = 'block';
-                arrangeIcons();
+                if(!document.querySelector('main').classList.contains('services')) {
+
+                    arrangeIcons();
+
+                }
                 modalImgIndex = getIndexOfClickedImg(this.src);
                 modalContent.href = this.src;
+                modalContent.title = this.alt;
 
-                modalImg.addEventListener('load', function() {
-
-                    if(this.offsetHeight < modalContent.offsetHeight) {
-
-                        modalContent.style.paddingTop = ((modalContent.offsetHeight - this.offsetHeight) / 2) + 'px';
-
-                    }
-
-                }, {
-                    once: true
-                });
-
+                modalImg.addEventListener('load', arrangeModalImage, { once: true });
 
                 modalImg.src = this.src;
                 captionText.innerText = this.alt;
@@ -175,11 +177,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
         span.onclick = hideModal;
 
-        Array.from(modalControls).forEach(function(icon) {
+        if(!document.querySelector('main').classList.contains('services')) {
 
-            icon.onclick = handleControlClick;
+            Array.from(modalControls).forEach(function(icon) {
 
-        });
+                icon.onclick = handleControlClick;
+
+            });
+
+        }
 
     }
 

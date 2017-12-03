@@ -13,3 +13,7 @@ Disallow: /downloads
 User-agent: Googlebot-Image/1.0
 
 Disallow: /
+
+User-agent: *
+
+Disallow: /maintenance.php

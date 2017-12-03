@@ -62,6 +62,7 @@
     position: fixed;
     top: 94%;
     left: 0;
+    cursor: context-menu;
 }
 
 .image-modal-content,
@@ -75,11 +76,12 @@
 
 [class^="icon"].image-modal {
     position: absolute;
-    color: rgba(160, 160, 160, 0.6);
+    color: rgba(206, 206, 206, 0.6);
     text-shadow: 1px 1px rgb(0, 0, 0);
     cursor: pointer;
     z-index: 20;
     display: inline-block;
+    font-size: 20px;
 }
 
 @-webkit-keyframes zoom {
