@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="<?php echo constant('BASEURL') ?>/css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="<?php echo constant('BASEURL') ?>/css/icons.min.css" type="text/css">
 <!-- <Responsive CSS> -->
+<link rel="stylesheet" media="(max-width : 769px)" href="<?php echo BASEURL; ?>/css/extra-small.min.css">
 <link rel="stylesheet" media="(max-width : 320px)" href="<?php echo constant('BASEURL') ?>/css/max-320.min.css">
 <link rel="stylesheet" media="(min-width : 321px) and (max-width : 480px)" href="<?php echo constant('BASEURL') ?>/css/320-480.min.css">
 <link rel="stylesheet" media="(min-width : 481px) and (max-width : 768px)" href="<?php echo constant('BASEURL') ?>/css/480-768.min.css">
