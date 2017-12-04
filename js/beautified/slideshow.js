@@ -50,38 +50,43 @@ var prevImg = 0,
 
         return true;
 
+    },
+    insertSlideshow = function() {
+
+        if(window.innerWidth <= 1000) {
+            return true;
+        }
+
+        var code = '';
+
+        container = document.getElementById('slideshow');
+        baseURL = container.dataset.baseUrl;
+
+        srcs.forEach(function(item, index) {
+
+            item = baseURL + '/' + item;
+            code += "\n<img class='slide-img' src='" + item + "'";
+            code += " alt='image of cows in slideshow " + index + "1'/>\n";
+
+        });
+
+        container.innerHTML = code;
+
+        slideImgs = document.getElementsByClassName('slide-img');
+
+        Array.from(slideImgs).forEach(function(img) {
+
+            img.addEventListener('animationend', slideNextImage);
+            img.addEventListener('webkitAnimationEnd', slideNextImage);
+            img.addEventListener('oAnimationEnd', slideNextImage);
+            img.addEventListener('msAnimationEnd', slideNextImage);
+
+        });
+
+        slideImgs[0].classList.add('fadeIn');
+
     };
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', insertSlideshow, { once: true });
 
-    var code = '';
-
-    container = document.getElementById('slideshow');
-    baseURL = container.dataset.baseUrl;
-
-    srcs.forEach(function(item, index) {
-
-        item = baseURL + '/' + item;
-        code += "\n<img class='slide-img' src='" + item + "'";
-        code += " alt='image of cows in slideshow " + index + "1'/>\n";
-
-    });
-
-    container.innerHTML = code;
-
-    slideImgs = document.getElementsByClassName('slide-img');
-
-    Array.from(slideImgs).forEach(function(img) {
-
-        img.addEventListener('animationend', slideNextImage);
-        img.addEventListener('webkitAnimationEnd', slideNextImage);
-        img.addEventListener('oAnimationEnd', slideNextImage);
-        img.addEventListener('msAnimationEnd', slideNextImage);
-
-    });
-
-    slideImgs[0].classList.add('fadeIn');
-
-}, {
-    once: true
-});
+window.onresize = insertSlideshow;
