@@ -35,7 +35,8 @@
 <script src="<?php echo constant('BASEURL') ?>/js/twitter-widj.min.js"></script>
 <!-- <Google Analytics Script> -->
 <?php if(($_SERVER['SERVER_NAME'] !== 'localhost') && (strpos($_SERVER['SERVER_NAME'], '192.168.1') == -1)) { ?>
-<script>!function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-74692550-9","auto"),ga("send","pageview");</script>
+<!-- Global site tag(gtag.js)-Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-74692550-9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());gtag('config','UA-74692550-9');</script>
 <?php } ?>
 <!-- </Google Analytics Script> -->
 <!-- <Javascript> -->
