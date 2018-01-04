@@ -34,9 +34,8 @@
 <!-- </Responsive CSS> -->
 <script src="<?php echo constant('BASEURL') ?>/js/twitter-widj.min.js"></script>
 <!-- <Google Analytics Script> -->
-<?php if(($_SERVER['SERVER_NAME'] !== 'localhost') && (strpos($_SERVER['SERVER_NAME'], '192.168.1') == -1)) { ?>
-<!-- Global site tag(gtag.js)-Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-74692550-9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
-gtag('js',new Date());gtag('config','UA-74692550-9');</script>
+<?php if($_SERVER['SERVER_NAME'] !== 'localhost') { ?>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','UA-74692550-9');</script>
 <?php } ?>
 <!-- </Google Analytics Script> -->
 <!-- <Javascript> -->
