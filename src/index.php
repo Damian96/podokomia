@@ -10,25 +10,20 @@
 	define('BASEURL', $functions->getBaseUrl());
 	define('BASEPATH', $functions->getBasePath());
 
-	if (isset($_GET['action']) && !empty($_GET['action']) && in_array($_GET['action'], $functions->actions)) {
-
+	if (isset($_GET['action']) && !empty($_GET['action']) && in_array($_GET['action'], $functions->actions))
 		$language = new Language($functions->getActionLanguage($_GET['action']));
-
-	} else {
-
+	else
 		$language = new Language('gr');
 
-	}
-
 	define('LANG', $language->getLanguage());
-	define('COOKIE', constant('LANG'));
+	define('COOKIE', LANG);
 	define('TITLE', $functions->getTitle(LANG, ACTION));
 
 	$basePath = BASEPATH . '/includes/internalization/' . LANG . '/';
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo LANG === 'gr' ? 'el' : 'en' ?>">
-<?php require_once($basePath . "head.php"); ?>
+<?php require_once(BASEPATH . "/includes/head.php"); ?>
 <body>
 	<div id="wrapper" class="col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
 <?php require_once($basePath . "header.php"); ?>
@@ -46,13 +41,13 @@
 				}(document, 'script', 'facebook-jssdk'));</script>
 			</aside>
 			<div id="content" class="col-xm-12 col-sm-12 col-md-9 col-lg-9">
-<?php require_once($basePath . constant('FILE')); ?>
+<?php require_once($basePath . FILE); ?>
 
 			</div>
 		</main>
 	</div>
-<?php	if (in_array(constant('ACTION'), ['services', 'articles'], TRUE))
-			require_once(constant('BASEPATH') . '/includes/image-modal.php'); ?>
+<?php	if (in_array(ACTION, ['services', 'articles'], TRUE))
+			require_once(BASEPATH . '/includes/image-modal.php'); ?>
 <?php require_once($basePath . "footer.php"); ?>
 </body>
 </html>

@@ -5,23 +5,28 @@
  */
 class Functions {
 
+	public $greekActions = [
+		'αρχική',
+		'αρχικη',
+		'υπηρεσίες',
+		'υπηρεσιες',
+		'άρθρα',
+		'αρθρα',
+		'επικοινωνία',
+		'επικοινωνια',
+	];
+
+	public $englishActions = [
+		'index',
+		'homepage',
+		'services',
+		'articles',
+		'contact',
+	];
+
 	function __construct() {
 
-		$this->actions = [
-			'index',
-			'αρχική',
-			'αρχικη',
-			'υπηρεσίες',
-			'υπηρεσιες',
-			'άρθρα',
-			'αρθρα',
-			'επικοινωνία',
-			'επικοινωνια',
-			'homepage',
-			'services',
-			'articles',
-			'contact',
-		];
+		$this->actions = array_merge($this->greekActions, $this->englishActions);
 
 	}
 
@@ -31,31 +36,20 @@ class Functions {
 	 * @param  string $action The action/page.
 	 * @return string The formatted title.
 	 */
-	public function getTitle($lang, $action) {
+	public function getTitle($language, $action) {
 
-		$suffix = ($lang === 'gr') ? ' - Ποδοκομία Αγελάδων' : ' - Cattle Hoof Trimming';
+		$suffix = $language === 'gr' ? 'Ποδοκομία Αγελάδων' : 'Cattle Hoof Trimming';
 
-		if ($action === 'homepage') {
-
-			return (($lang === 'gr') ? 'Αρχική' : 'Homepage') . $suffix;
-
-		} else if ($action === 'services') {
-
-			return (($lang === 'gr') ? 'Υπηρεσίες' : 'Services') . $suffix;
-
-		} else if ($action === 'articles') {
-
-			return (($lang === 'gr') ? 'Άρθρα' : 'Articles') . $suffix;
-
-		} else if ($action === 'contact') {
-
-			return (($lang === 'gr') ? 'Επικοινωνία' : 'Contact') . $suffix;
-
-		} else {
-
+		if ($action === 'homepage')
+			return ($language === 'gr' ? 'Αρχική' : 'Homepage') . ' - ' . $suffix;
+		else if ($action === 'services')
+			return ($language === 'gr' ? 'Υπηρεσίες' : 'Services') . ' - ' . $suffix;
+		else if ($action === 'articles')
+			return ($language === 'gr' ? 'Άρθρα' : 'Articles') . ' - ' . $suffix;
+		else if ($action === 'contact')
+			return ($language === 'gr' ? 'Επικοινωνία' : 'Contact') . ' - ' . $suffix;
+		else
 			return $suffix;
-
-		}
 
 	}
 
@@ -66,17 +60,10 @@ class Functions {
      */
     public function searchContentFile($name) {
 
-		$filename = glob(self::getBasePath() . '/includes/internalization/en/' . $name . '.php');
-
-        if ($filename && (count($filename) == 1)) {
-
+        if ($$filename = glob(self::getBasePath() . '/includes/internalization/en/' . $name . '.php') && count($filename) == 1)
 			return basename($filename[0]);
-
-        } else {
-
+        else
 			return 'homepage.php';
-
-		}
 
     }
 
@@ -86,27 +73,17 @@ class Functions {
      */
     public function getActionFile() {
 
-		if (!isset($_GET) || !isset($_GET['action']) || !in_array($_GET['action'], $this->actions, true)) {
-
+		if (!isset($_GET) || !isset($_GET['action']) || !in_array($_GET['action'], $this->actions, true))
 			return 'homepage';
-
-		} else if (($_GET['action'] === 'υπηρεσίες') || ($_GET['action'] === 'υπηρεσιες') || ($_GET['action'] === 'services')) {
-
+		else if (in_array($_GET['action'], ['services', 'υπηρεσίες', 'υπηρεσιες']))
 			return 'services';
-
-		} else if (($_GET['action'] === 'άρθρα') || ($_GET['action'] === 'αρθρα') || ($_GET['action'] === 'articles')) {
-
+		else if (in_array($_GET['action'], ['άρθρα', 'αρθρα','articles']))
 			return 'articles';
-
-		} else if (($_GET['action'] === 'επικοινωνία') || ($_GET['action'] === 'επικοινωνια') || ($_GET['action'] === 'contact')) {
-
+		else if(in_array($_GET['action'], ['επικοινωνία', 'επικοινωνια', 'contact']))
 			return 'contact';
-
-		} else {
-
+		else
 			return 'homepage';
 
-		}
     }
 
 	/**
@@ -116,27 +93,12 @@ class Functions {
 	 */
 	public function getActionLanguage($action) {
 
-		if (empty($action) || !in_array($action, $this->actions, true)) {
-
+		if (in_array($action, $this->greekActions, true))
 			return 'gr';
-
-		} else if (($action === 'αρχική') || ($action === 'υπηρεσίες') || ($action === 'άρθρα') || ($action === 'επικοινωνία')) {
-
-			return 'gr';
-
-		} else if (($action === 'αρχικη') || ($action === 'υπηρεσιες') || ($action === 'αρθρα') || ($action === 'επικοινωνια')) {
-
-			return 'gr';
-
-		} else if (($action === 'homepage') || ($action === 'services') || ($action === 'articles') || ($action === 'contact')) {
-
+		else if (in_array($action, $this->englishActions, true))
 			return 'en';
-
-		} else {
-
-			return '';
-
-		}
+		else
+			return 'gr';
 
 	}
 
@@ -151,22 +113,14 @@ class Functions {
 
 		if (!empty($action) && in_array($action, $this->actions, true) && in_array($language, ['gr', 'en'], true)) {
 
-			if (($action === 'homepage') || ($action === 'index') || ($action === 'αρχική') || ($action === 'αρχικη')) {
-
+			if (($action === 'homepage') || ($action === 'index') || ($action === 'αρχική') || ($action === 'αρχικη'))
 				return $language == 'gr' ? 'homepage' : 'αρχική';
-
-			} else if (($action === 'services') || ($action === 'υπηρεσίες') || ($action === 'υπηρεσιες')) {
-
+			else if (($action === 'services') || ($action === 'υπηρεσίες') || ($action === 'υπηρεσιες'))
 				return $language == 'gr' ? 'services' : 'υπηρεσίες';
-
-			} else if (($action === 'articles') || ($action === 'άρθρα') || ($action === 'αρθρα')) {
-
+			else if (($action === 'articles') || ($action === 'άρθρα') || ($action === 'αρθρα'))
 				return $language == 'gr' ? 'articles' : 'άρθρα';
-
-			} else if (($action === 'contact') || ($action === 'επικοινωνία') || ($action === 'επικοινωνια')) {
-
+			else if (($action === 'contact') || ($action === 'επικοινωνία') || ($action === 'επικοινωνια'))
 				return $language == 'gr' ? 'contact' : 'επικοινωνία';
-			}
 
 		}
 
@@ -177,7 +131,7 @@ class Functions {
 	public function getDescription($language) {
 		if ($language === 'gr')
 			return "Βασίλης Ζαφειράκης κτηνίατρος  παραγωγικών ζώων, νύχια / εξονυχισμό αγελάδων, Θεσσαλονίκη. κτηνιατρος μεγαλων και παραγωγικων ζωων θεσσαλονικη";
-		elseif ($language === 'en')
+		else if ($language === 'en')
 			return "Vasilis Zafeirakis is a Veterinarian that lives in Thessaloniki, Greece and works as a Cattle Hoof Trimmer";
 	}
 
@@ -185,6 +139,7 @@ class Functions {
 		if($language === 'gr')
 			return "νύχια αγελάδων,κτηνίατρος αγελάδων,κτηνίατρος μεγάλων ζώων,κτηνίατρος θεσσαλονίκη,κτηνίατρος παραγωγικών μονάδων,nixia ageladwn,kthniatros,kthniatros megalwn zwwn";
 	}
+
     /**
      * Clears all the cookies that are used until today.
      */
@@ -213,21 +168,14 @@ class Functions {
 	 */
 	public function getBaseUrl() {
 
-		$pageURL = (isset($_SERVER["HTTPS"]) && ($_SERVER["HTTPS"] == "on")) ? "https://" : "http://";
+		$pageURL = isset($_SERVER["HTTPS"]) && ($_SERVER["HTTPS"] == "on") ? "https://" : "http://"
+					. $_SERVER["SERVER_NAME"];
 
-        $pageURL .= $_SERVER["SERVER_NAME"];
-
-        if ($_SERVER["SERVER_PORT"] != "80") {
-
+        if ($_SERVER["SERVER_PORT"] != "80")
 			$pageURL .= ":" . $_SERVER["SERVER_PORT"];
 
-        }
-
-		if ($this->isLocal()) {
-
+		if ($this->isLocal())
 			$pageURL .= '/podokomia/build';
-
-		}
 
 		return $pageURL;
 	}
@@ -238,18 +186,16 @@ class Functions {
      */
     public function getBasePath() {
 
-        if (($_SERVER['SERVER_NAME'] === 'localhost') || (strpos($_SERVER['SERVER_NAME'], '192.168.1') > -1)) {
-
+        if ($this->isLocal())
 			return $_SERVER['DOCUMENT_ROOT'] . '/podokomia/build';
-
-		}
-
-		return $_SERVER['DOCUMENT_ROOT'];
+		else
+			return $_SERVER['DOCUMENT_ROOT'];
 
 	}
 
 	public function isLocal() {
 		return $_SERVER['SERVER_NAME'] === 'localhost' || strpos($_SERVER['SERVER_NAME'], '192.168.1') > -1;
 	}
+
 }
 ?>

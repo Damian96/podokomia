@@ -32,9 +32,8 @@ class Language {
     }
 
     function getLanguage() {
-
         return $this->activeLanguage;
-
     }
+
 }
 ?>

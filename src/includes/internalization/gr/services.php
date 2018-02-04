@@ -13,7 +13,7 @@
     </ul>
 </div>
 <div id="serv-images">
-    <img src="<?php echo constant('BASEURL') . '/images/services-1.jpg' ?>" class="modal-image" alt="Κτηνιατρική περίθαλψη"/>
-    <img src="<?php echo constant('BASEURL') . '/images/services-2.jpg' ?>" class="modal-image" alt="Βαθμολόγηση της στάσης και κίνησης των αγελάδων"/>
-    <img src="<?php echo constant('BASEURL') . '/images/services-4.jpg' ?>" class="modal-image" alt="Διαχείριση αναπαραγωγής με υπέρηχο"/>
+    <img src="<?php echo BASEURL . '/images/services-1.jpg' ?>" class="modal-image" alt="Κτηνιατρική περίθαλψη"/>
+    <img src="<?php echo BASEURL . '/images/services-2.jpg' ?>" class="modal-image" alt="Βαθμολόγηση της στάσης και κίνησης των αγελάδων"/>
+    <img src="<?php echo BASEURL . '/images/services-4.jpg' ?>" class="modal-image" alt="Διαχείριση αναπαραγωγής με υπέρηχο"/>
 </div>
