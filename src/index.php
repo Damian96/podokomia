@@ -42,12 +42,13 @@
 			</aside>
 			<div id="content" class="col-xm-12 col-sm-12 col-md-9 col-lg-9">
 <?php require_once($basePath . FILE); ?>
-
 			</div>
 		</main>
-		<?php require_once($basePath . "footer.php"); ?>
 	</div>
-<?php	if (in_array(ACTION, ['services', 'articles'], TRUE))
-			require_once(BASEPATH . '/includes/image-modal.php'); ?>
+<?php
+	if (in_array(ACTION, ['services', 'articles'], TRUE))
+			require_once(BASEPATH . '/includes/image-modal.php');
+	require_once($basePath . "footer.php");
+?>
 </body>
 </html>

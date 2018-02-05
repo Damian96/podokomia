@@ -32,7 +32,6 @@ main > *:nth-child(2) {
 aside {
     padding-right: 0px !important;
     padding-bottom: 15px;
-    margin-bottom: 20px;
 }
 
 #content {
@@ -49,10 +48,17 @@ aside {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
+    color: #fff;
     width: 100%;
     font-size: 0.95em;
+}
+
+footer a {
+    color: #000;
+}
+
+footer a:hover, footer a:focus {
+    color: rgb(34, 34, 34);
 }
 
 footer > div {
