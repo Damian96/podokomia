@@ -1,7 +1,7 @@
 		<ul id="language-control" class="nav navbar-nav navbar-right">
 			<li class="dropdown">
 				<?php
-					$link = $functions->getLanguageLink(ACTION, LANG);
+					$link = $functions->getFlagActionLink(ACTION, LANG);
 					if (LANG === 'gr'):
 				?>
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

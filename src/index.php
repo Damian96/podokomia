@@ -11,9 +11,9 @@
 	define('BASEPATH', $functions->getBasePath());
 
 	if (isset($_GET['action']) && !empty($_GET['action']) && in_array($_GET['action'], $functions->actions))
-		$language = new Language($functions->getActionLanguage($_GET['action']));
+		$language = new Language($functions->getActionLanguage($_GET['action']), $functions);
 	else
-		$language = new Language('gr');
+		$language = new Language('', $functions);
 
 	define('LANG', $language->getLanguage());
 	define('COOKIE', LANG);

@@ -54,13 +54,13 @@ class Functions {
 	}
 
     /**
-     * Searches the /podokomia/inludes/internalization/en/ according with the specified name.
+     * Searches the /podokomia/inludes/internalization/en/ directory according with the specified filename.
      * @param  string $name The filename to search.
      * @return string The filename that has been found or if not 'homepage.php';
      */
     public function searchContentFile($name) {
 
-        if ($$filename = glob(self::getBasePath() . '/includes/internalization/en/' . $name . '.php') && count($filename) == 1)
+        if ($filename = glob($this->getBasePath() . '/includes/internalization/en/' . $name . '.php') && count($filename) == 1)
 			return basename($filename[0]);
         else
 			return 'homepage.php';
@@ -116,7 +116,7 @@ class Functions {
 	 * @param string $action The current action (page)
 	 * @param string $language The current language
 	 */
-	public function getLanguageLink($action, $language) {
+	public function getFlagActionLink($action, $language) {
 
 		if (!empty($action) && in_array($action, $this->actions, true) && in_array($language, ['gr', 'en'], true)) {
 
