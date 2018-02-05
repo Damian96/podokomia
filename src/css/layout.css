@@ -1,120 +1,26 @@
-/**
-    Primary Color: #193354
-    Secondary Color: #93B209.
-    Tetriary Color: #0070FF.
-*/
-
-header span.icon-mobile {
-    font-size: 1.5em
-}
-
-#info,
-#info > * {
-    height: 50%
-}
-
-#lang-control {
-    width: 100%;
-    text-align: right
-}
-
-#lang-control a {
-    display: inline-block
-}
-
-.l-img {
-    width: 32px;
-    height: 16px;
-    cursor: pointer
-}
-
-#name {
-    margin-top: 0;
-    margin-bottom: 0
-}
-
-#prof {
-    margin-top: 0;
-    font-size: 1.2em;
-    margin-top: 5px
-}
-
-#email,
-#phone {
-    font-size: 1.3em
-}
-
-#email [class^="icon"],
-#phone [class^="icon"] {
-    position: relative;
-    top: 2px;
-    left: -4px
-}
-
-#email {
-    margin-top: 0;
-    padding-top: 3.75%
-}
-
-#phone {
-    margin-top: 0;
-    padding-bottom: 12px
-}
-
-#clues {
-    text-align: center
-}
-
 #wrapper {
     background-color: #fff;
-    position: relative
-}
-
-#wrapper > *:not(#lang-control) {
-    margin-bottom: 20px
-}
-
-#main-menu {
-    width: 100%;
     position: relative;
-    margin-top: 50px;
-    padding: 0
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
-#main-menu > .col-lg-3:not(:last-child) {
-    border-width: 1px 0 1px 1px
+.navbar-header {
+    padding-left: 15px;
 }
 
-#main-menu > .col-lg-3:last-child {
-    border-width: 1px
+.navbar-brand img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
-#main-menu > .col-lg-3 {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+#language-control img {
+    width: 30px;
+    height: 15px;
+}
+
+#language-control .dropdown-menu li a {
     text-align: center;
-    border-color: #000;
-    border-style: solid
-}
-
-#main-menu > .col-lg-3:not(.active) {
-    background-color: #93B209;
-}
-
-#main-menu > .col-lg-3.active {
-    background-color: #0070FF;
-}
-
-#main-menu > .col-lg-3:hover {
-    background-color: #a6aaad;
-}
-
-#main-menu a {
-    display: block;
-    height: 100%;
-    padding: 5px 0;
-    font-size: 19px
 }
 
 main > *:nth-child(2) {
@@ -124,30 +30,31 @@ main > *:nth-child(2) {
 }
 
 aside {
-    padding-left: 0px !important;
-    padding-right: 0px !important
+    padding-right: 0px !important;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 #content {
-    font-size: 17px
+    font-size: 1.2em
 }
 
-footer {
-    font-size: .8em;
-    color: #fff;
-    border-style: hidden;
-    border-radius: 1.5em
-}
-
-footer > div {
-    text-align: center
-}
-
-#developer-link a,
-#main-menu a {
-    color: #000 !important;
+.twitter-timeline,
+.fb-page {
+	max-width: 100%;
 }
 
 .fb-page {
     margin-top: 50px
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.95em;
+}
+
+footer > div {
+    text-align: center
 }

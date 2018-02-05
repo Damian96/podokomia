@@ -2,6 +2,7 @@
 <meta charset="UTF-8">
 <title><?php echo TITLE ?></title>
 <link rel="icon" href="<?php echo BASEURL ?>/favicon.ico" type="image/x-icon">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <Search Engines Tags> -->
 <meta name="description" content="<?php echo $functions->getDescription(LANG); ?>">
@@ -24,6 +25,12 @@
 <!-- <Bootstrap CSS> !-->
 <link rel="stylesheet" href="<?php echo BASEURL ?>/css/bootstrap.css" type="text/css">
 <!-- </Bootstrap CSS> !-->
+<!-- </JQuery> !-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- </JQuery> !-->
+<!-- </Bootstrap JS> !-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- </Bootstrap JS> !-->
 <!-- <Google Font CSS> -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 <!-- </Google Font CSS> -->
@@ -34,15 +41,9 @@
 <![endif]-->
 <!-- </Icons CSS> !-->
 <!-- <Responsive CSS> -->
-<!-- <link rel="stylesheet" media="(max-width : 769px)" href="<?php echo BASEURL; ?>/css/extra-small.css">
-<link rel="stylesheet" media="(max-width : 320px)" href="<?php echo BASEURL ?>/css/max-320.css">
-<link rel="stylesheet" media="(min-width : 321px) and (max-width : 480px)" href="<?php echo BASEURL ?>/css/320-480.css">
-<link rel="stylesheet" media="(min-width : 481px) and (max-width : 768px)" href="<?php echo BASEURL ?>/css/480-768.css"> !-->
-<link rel="stylesheet" media="(min-width : 769px) and (max-width : 980px)" href="<?php echo BASEURL ?>/css/768-980.css">
-<link rel="stylesheet" media="(min-width : 981px) and (max-width : 1220px)" href="<?php echo BASEURL ?>/css/980-1220.css">
-<link rel="stylesheet" media="(min-width : 1221px) and (max-width : 1440px)" href="<?php echo BASEURL ?>/css/1220-1440.css">
-<link rel="stylesheet" media="(min-width : 1441px) and (max-width : 1824px)" href="<?php echo BASEURL ?>/css/1440-1824.css">
-<link rel="stylesheet" media="(min-width : 1825px)" href="<?php echo BASEURL ?>/css/min-1824.css">
+<link rel="stylesheet" media="(max-width : 768px)" href="<?php echo BASEURL; ?>/css/extra-small.css">
+<link rel="stylesheet" media="(min-width : 769px) and (max-width : 992px)" href="<?php echo BASEURL; ?>/css/small.css">
+<link rel="stylesheet" media="(min-width : 992px) and (max-width : 1200px)" href="<?php echo BASEURL; ?>/css/medium.css">
 <!-- </Responsive CSS> -->
 <!-- <Google Analytics Script> -->
 <?php if ($functions->isLocal()): ?>

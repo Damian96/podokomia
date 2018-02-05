@@ -103,6 +103,13 @@ class Functions {
 	}
 
 
+	public function getLanguageHome($language) {
+		if($language === 'gr')
+			return 'αρχική';
+		else if($language === 'en')
+			return 'home';
+	}
+
 	/**
 	 * Returns the appropriate language flag link according to the current page and language.
 	 * If the parameters are invalid an empty string is returned.

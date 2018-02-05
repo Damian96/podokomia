@@ -28,7 +28,7 @@
 	<div id="wrapper" class="col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
 <?php require_once($basePath . "header.php"); ?>
 		<main id="main" class="<?php echo ACTION ?>">
-			<aside id="sibebar" class="col-xm-12 col-sm-12 col-md-3 col-lg-3">
+			<aside id="sibebar" class="hidden-xs hidden-sm col-md-3 col-lg-3">
 <?php require_once($basePath . "sidebar.php"); ?>
 
 				<div id="fb-root"></div>
@@ -45,9 +45,9 @@
 
 			</div>
 		</main>
+		<?php require_once($basePath . "footer.php"); ?>
 	</div>
 <?php	if (in_array(ACTION, ['services', 'articles'], TRUE))
 			require_once(BASEPATH . '/includes/image-modal.php'); ?>
-<?php require_once($basePath . "footer.php"); ?>
 </body>
 </html>

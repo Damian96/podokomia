@@ -131,7 +131,7 @@ var originalImages,
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    if(document.querySelector('main').classList.contains('services') || document.querySelector('main').classList.contains('articles')) {
+    if((document.querySelector('main').classList.contains('services') || document.querySelector('main').classList.contains('articles')) && window.innerWidth >= 768) {
 
         var span = document.querySelector('#modal-image-container .close');
 
@@ -179,6 +179,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         }
 
+    } else if(window.innerWidth < 768 && document.querySelectorAll('.modal-image').length > 0) {
+
+        Array.from(document.querySelectorAll('.modal-image')).forEach(function(image) {
+            image.addEventListener('click', function() {
+                window.open(this.src, '_blank');
+            });
+        });
     }
 
 }, {

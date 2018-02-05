@@ -1,29 +1,35 @@
-		<header class="col-sm-12 col-md-12 col-lg-12">
-<?php require_once(BASEPATH . '/includes/language-selector.php'); ?>
-			<div id="clues" class="col-sm-12 col-md-6 col-lg-6">
-				<h2 id="name">Βασίλης Ζαφειράκης</h2>
-				<p id="prof">Κτηνίατρος Α.Π.Θ.</p>
-				<img alt="veterinarian-logo" id="logo" src="<?php echo BASEURL ?>/images/logo.jpg"/>
-			</div>
-			<div class="col-sm-12 col-md-6 col-lg-6 text-center">
-				<div id="info">
-					<p id="email"><span class="icon-paper-plane"></span>vas.zafeirakis@gmail.com</p>
-					<p id="phone"><span class="icon-mobile"></span>6986798497</p>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-collapsed" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="<?php echo BASEURL . '/' . LANG . '/' . $functions->getLanguageHome(LANG) ?>"><img alt="veterinarian-logo" id="logo" src="<?php echo BASEURL ?>/images/logo.png"/></a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="main-menu-collapsed">
+						<ul class="nav navbar-nav">
+							<li class="<?php echo (ACTION === 'homepage') ? 'active' : '' ?>">
+								<a href="<?php echo BASEURL ?>/gr/αρχική">Αρχική</a>
+							</li>
+							<li class="<?php echo (ACTION === 'services') ? 'active' : '' ?>">
+								<a href="<?php echo BASEURL ?>/gr/υπηρεσίες">Υπηρεσίες</a>
+							</li>
+							<li class="<?php echo (ACTION === 'articles') ? 'active' : '' ?>">
+								<a href="<?php echo BASEURL ?>/gr/άρθρα">Άρθρα</a>
+							</li>
+							<li class="<?php echo (ACTION === 'contact') ? 'active' : '' ?>">
+								<a href="<?php echo BASEURL ?>/gr/επικοινωνία">Επικοινωνία</a>
+							</li>
+						</ul>
+						<?php require_once(BASEPATH . '/includes/language-selector.php'); ?>
+					</div>
+					<!-- /.navbar-collapse -->
 				</div>
-				<div id="slideshow" data-base-url="<?php echo BASEURL ?>"></div>
-			</div>
-			<div id="main-menu" class="hidden-xs hidden-sm col-md-12 col-lg-12">
-				<div class="hidden-xs hidden-sm col-md-3 col-lg-3 <?php echo (ACTION === 'homepage') ? 'active' : '' ?>">
-					<a href="<?php echo BASEURL?>/gr/αρχική" title="Αρχική"><span>Αρχική</span></a>
-				</div>
-				<div class="hidden-xs hidden-sm col-md-3 col-lg-3 <?php echo (ACTION === 'services') ? 'active' : '' ?>">
-					<a href="<?php echo BASEURL?>/gr/υπηρεσίες" title="Υπηρεσίες"><span>Υπηρεσίες</span></a>
-				</div>
-				<div class="hidden-xs hidden-sm col-md-3 col-lg-3 <?php echo (ACTION === 'articles') ? 'active' : '' ?>">
-					<a href="<?php echo BASEURL?>/gr/άρθρα" title="Άρθρα"><span>Άρθρα</span></a>
-				</div>
-				<div class="hidden-xs hidden-sm col-md-3 col-lg-3 <?php echo (ACTION === 'contact') ? 'active' : '' ?>">
-					<a href="<?php echo BASEURL?>/gr/επικοινωνία" title="Επικοινωνία"><span>Επικοινωνία</span></a>
-				</div>
-			</div>
-		</header>
+				<!-- /.container-fluid -->
+			</nav>
