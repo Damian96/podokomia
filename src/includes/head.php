@@ -22,14 +22,14 @@
 <link rel="stylesheet" type="text/css" href="<?php echo BASEURL ?>/css/modal-image.css">
 <?php endif ?>
 <!-- <Module CSS> -->
-<!-- <Bootstrap CSS> !-->
+<!-- <Bootstrap 3.3.7 CSS> !-->
 <link rel="stylesheet" href="<?php echo BASEURL ?>/css/bootstrap.css" type="text/css">
 <!-- </Bootstrap CSS> !-->
+<!-- </JQuery 1.12.4> !-->
+<script src="<?php echo BASEURL ?>/js/jquery.min.js" type="text/javascript"></script>
 <!-- </JQuery> !-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- </JQuery> !-->
-<!-- </Bootstrap JS> !-->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- </Bootstrap 3.3.7 JS> !-->
+<script src="<?php echo BASEURL ?>/js/bootstrap.min.js" type="text/javascript"></script>
 <!-- </Bootstrap JS> !-->
 <!-- <Google Font CSS> -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
@@ -60,8 +60,7 @@
 <!-- </Google Analytics Script> -->
 <!-- <Javascript> -->
 <!-- <script src="<?php echo BASEURL . '/js/onLoad.js' ?>"></script> -->
-<script src="<?php echo BASEURL . '/js/servicesMod.js' ?>"></script>
-<script src="<?php echo BASEURL . '/js/slideshow.js' ?>"></script>
+<script src="<?php echo BASEURL . '/js/image-modal.js' ?>"></script>
 <!-- </Javascript> -->
 <!-- <Twitter Timeline JS> !-->
 <script type="text/javascript">

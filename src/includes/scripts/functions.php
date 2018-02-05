@@ -18,6 +18,7 @@ class Functions {
 
 	public $englishActions = [
 		'index',
+		'home',
 		'homepage',
 		'services',
 		'articles',
@@ -25,9 +26,7 @@ class Functions {
 	];
 
 	function __construct() {
-
 		$this->actions = array_merge($this->greekActions, $this->englishActions);
-
 	}
 
 	/**
@@ -40,7 +39,7 @@ class Functions {
 
 		$suffix = $language === 'gr' ? 'Ποδοκομία Αγελάδων' : 'Cattle Hoof Trimming';
 
-		if ($action === 'homepage')
+		if ($action === 'homepage' || $action === 'home')
 			return ($language === 'gr' ? 'Αρχική' : 'Homepage') . ' - ' . $suffix;
 		else if ($action === 'services')
 			return ($language === 'gr' ? 'Υπηρεσίες' : 'Services') . ' - ' . $suffix;
@@ -120,7 +119,7 @@ class Functions {
 
 		if (!empty($action) && in_array($action, $this->actions, true) && in_array($language, ['gr', 'en'], true)) {
 
-			if (($action === 'homepage') || ($action === 'index') || ($action === 'αρχική') || ($action === 'αρχικη'))
+			if (($action === 'homepage') || ($action === 'home') || ($action === 'index') || ($action === 'αρχική') || ($action === 'αρχικη'))
 				return $language == 'gr' ? 'homepage' : 'αρχική';
 			else if (($action === 'services') || ($action === 'υπηρεσίες') || ($action === 'υπηρεσιες'))
 				return $language == 'gr' ? 'services' : 'υπηρεσίες';
