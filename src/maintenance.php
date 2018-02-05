@@ -12,7 +12,7 @@
 		<meta charset="UTF-8">
 		<meta name="robots" content="noindex,nofollow">
 		<title>Podokomia - Maintenance</title>
-		<link rel="stylesheet" href="css/maintenance.min.css"/>
+		<link rel="stylesheet" href="css/maintenance.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	</head>
 	<body>
