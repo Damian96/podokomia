@@ -131,7 +131,7 @@ var originalImages,
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    if((document.querySelector('main').classList.contains('services') || document.querySelector('main').classList.contains('articles')) && window.innerWidth >= 768) {
+    if(window.innerWidth >= 768) {
 
         var span = document.querySelector('#modal-image-container .close');
 

@@ -136,7 +136,7 @@ class Functions {
 
 	public function getDescription($language) {
 		if ($language === 'gr')
-			return "Βασίλης Ζαφειράκης κτηνίατρος  παραγωγικών ζώων, νύχια / εξονυχισμό αγελάδων, Θεσσαλονίκη. κτηνιατρος μεγαλων και παραγωγικων ζωων θεσσαλονικη";
+			return "Βασίλης Ζαφειράκης κτηνίατρος παραγωγικών ζώων, νύχια / εξονυχισμό αγελάδων, Θεσσαλονίκη. κτηνιατρος μεγαλων και παραγωγικων ζωων θεσσαλονικη";
 		else if ($language === 'en')
 			return "Vasilis Zafeirakis is a Veterinarian that lives in Thessaloniki, Greece and works as a Cattle Hoof Trimmer";
 	}

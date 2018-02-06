@@ -46,7 +46,7 @@
 <link rel="stylesheet" media="(min-width : 992px) and (max-width : 1200px)" href="<?php echo BASEURL; ?>/css/medium.css">
 <!-- </Responsive CSS> -->
 <!-- <Google Analytics Script> -->
-<?php if ($functions->isLocal()): ?>
+<?php if (!$functions->isLocal()): ?>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74692550-9"></script>
 <script>
@@ -59,8 +59,9 @@
 <?php endif ?>
 <!-- </Google Analytics Script> -->
 <!-- <Javascript> -->
-<!-- <script src="<?php echo BASEURL . '/js/onLoad.js' ?>"></script> -->
+<?php if (ACTION === 'services' || ACTION === 'articles'): ?>
 <script src="<?php echo BASEURL . '/js/image-modal.js' ?>"></script>
+<?php endif ?>
 <!-- </Javascript> -->
 <!-- <Twitter Timeline JS> !-->
 <script type="text/javascript">
