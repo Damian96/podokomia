@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'podokomia';
-  src: url('../font/podokomia.eot?84418604');
-  src: url('../font/podokomia.eot?84418604#iefix') format('embedded-opentype'),
-       url('../font/podokomia.woff2?84418604') format('woff2'),
-       url('../font/podokomia.woff?84418604') format('woff'),
-       url('../font/podokomia.ttf?84418604') format('truetype'),
-       url('../font/podokomia.svg?84418604#podokomia') format('svg');
+  src: url('../font/podokomia.eot?84358839');
+  src: url('../font/podokomia.eot?84358839#iefix') format('embedded-opentype'),
+       url('../font/podokomia.woff2?84358839') format('woff2'),
+       url('../font/podokomia.woff?84358839') format('woff'),
+       url('../font/podokomia.ttf?84358839') format('truetype'),
+       url('../font/podokomia.svg?84358839#podokomia') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'podokomia';
-    src: url('../font/podokomia.svg?84418604#podokomia') format('svg');
+    src: url('../font/podokomia.svg?84358839#podokomia') format('svg');
   }
 }
 */

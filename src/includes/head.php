@@ -1,6 +1,6 @@
 <!-- <?php echo $functions->getDescription(LANG); ?> !-->
 <meta charset="UTF-8">
-<title><?php echo TITLE ?></title>
+<title><?php echo $functions->getTitle(LANG, ACTION) ?></title>
 <link rel="icon" href="<?php echo BASEURL ?>/favicon.ico" type="image/x-icon">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,6 @@
 <link rel="stylesheet" href="<?php echo BASEURL ?>/css/<?php echo ACTION?>.css">
 <!-- </Single Page CSS> -->
 <!-- <Module CSS> -->
-<link rel="stylesheet" href="<?php echo BASEURL ?>/css/slideshow.css">
 <?php if (in_array(ACTION, ['services', 'articles'], TRUE)): ?>
 <link rel="stylesheet" type="text/css" href="<?php echo BASEURL ?>/css/modal-image.css">
 <?php endif ?>
@@ -65,6 +64,8 @@
 <!-- </Javascript> -->
 <!-- <Twitter Timeline JS> !-->
 <script type="text/javascript">
-window.twttr=function(a,b,c){var d,e=a.getElementsByTagName(b)[0],f=window.twttr||{};return a.getElementById(c)?f:(d=a.createElement(b),d.id=c,d.src="https://platform.twitter.com/widgets.js",e.parentNode.insertBefore(d,e),f._e=[],f.ready=function(a){f._e.push(a)},f)}(document,"script","twitter-wjs");
+if(window.innerWidth >= 768) {
+  window.twttr=function(a,b,c){var d,e=a.getElementsByTagName(b)[0],f=window.twttr||{};return a.getElementById(c)?f:(d=a.createElement(b),d.id=c,d.src="https://platform.twitter.com/widgets.js",e.parentNode.insertBefore(d,e),f._e=[],f.ready=function(a){f._e.push(a)},f)}(document,"script","twitter-wjs");
+}
 </script>
 <!-- </Twitter Timeline JS> -->

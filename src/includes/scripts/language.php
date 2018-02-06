@@ -6,8 +6,11 @@ class Language {
         'en',
     ];
     public $activeLanguage = 'gr';
+    public $functions;
 
     function __construct($actionLanguage = '', $functions) {
+
+        $this->functions = $functions;
 
         if (isset($_GET['language']) && !empty($_GET['language']) && in_array($_GET['language'], $this->languages, true))
             $this->activeLanguage = $_GET['language'];
@@ -22,10 +25,6 @@ class Language {
 
         setcookie('language', $this->activeLanguage, time() + 432000, $functions->isLocal() ? '/podokomia/build' : '/');
 
-    }
-
-    function getLanguage() {
-        return $this->activeLanguage;
     }
 
 }
