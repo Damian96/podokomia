@@ -8,17 +8,15 @@ var package = require('./package'),
 
 var paths = {
 	css: [
-		'src/css/*.css',
-		'!src/css/animation.css',
-		'!src/css/*-codes.css',
-		'!src/css/podokomia-embedded.css'
+		'src/css/*.css'
 	],
 	js: [
-		'src/js/*.js'
+		'src/js/*.js',
+		'!src/js/*.min.js'
 	],
 	other: [
-		'src/font/*',
 		'src/images/*',
+		'src/js/*.min.js',
 		'src/downloads/*',
 		'src/includes/*',
 		'src/includes/*/*',
@@ -63,7 +61,7 @@ var destination = function(file) {
 
 		return gulp.src('fontello-config.json')
 			.pipe(fontello(options))
-			.pipe(gulp.dest('src'));
+			.pipe(gulp.dest('build'));
 	};
 
 gulp.task('minifyJS', minifyJS);
@@ -71,7 +69,7 @@ gulp.task('minifyCSS', minifyCSS);
 gulp.task('copyOther', copyOther);
 gulp.task('glyph', downloadGlyphs);
 
-gulp.task('build', ['clean', 'glyph', 'minifyCSS', 'minifyJS', 'copyOther']);
+gulp.task('build', ['clean', 'minifyCSS', 'minifyJS', 'copyOther', 'glyph']);
 gulp.task('watch', function() {
 	gulp.watch(paths.js, minifyJS);
 	gulp.watch(paths.css, minifyCSS);
@@ -80,4 +78,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('clean', clean);
-gulp.task('default', ['clean', 'glyph', 'minifyCSS', 'minifyJS', 'copyOther', 'watch']);
+gulp.task('default', ['clean', 'minifyCSS', 'minifyJS', 'copyOther', 'glyph', 'watch']);

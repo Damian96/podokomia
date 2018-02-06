@@ -34,9 +34,11 @@
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 <!-- </Google Font CSS> -->
 <!-- <Icons CSS> -->
-<link rel="stylesheet" href="<?php echo BASEURL ?>/css/podokomia.css" type="text/css">
 <!--[if IE]>
-<link rel="stylesheet" href="<?php echo BASEURL ?>/css/podokomia-ie7.css" type="text/css">
+<link rel="stylesheet" href="<?php echo BASEURL ?>/css/pk-icons-ie7.css" type="text/css">
+<![endif]-->
+<!--[if !IE]>
+<link rel="stylesheet" href="<?php echo BASEURL ?>/css/pk-icons.css" type="text/css">
 <![endif]-->
 <!-- </Icons CSS> !-->
 <!-- <Responsive CSS> -->
