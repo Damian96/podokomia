@@ -1,0 +1,8 @@
+{
+    "require": {
+        "phing/phing": "2.16.1",
+        "phpunit/phpunit": "7.1.5",
+        "tedivm/jshrink": "~1.0",
+        "tubalmartin/cssmin": "4.1.1"
+    }
+}

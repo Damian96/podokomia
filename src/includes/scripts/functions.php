@@ -5,6 +5,8 @@
  */
 class Functions {
 
+	public $actions = null;
+	
 	public $greekActions = [
 		'αρχική',
 		'αρχικη',
