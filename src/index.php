@@ -11,24 +11,25 @@
 	define('BASEURL', $functions->getBaseUrl());
 	define('BASEPATH', $functions->getBasePath());
 
-	if (isset($_GET['action']) && !empty($_GET['action']) && in_array($_GET['action'], $functions->actions))
+	if (isset($_GET['action']) && !empty($_GET['action']) && in_array($_GET['action'], $functions->actions)) :
 		$language = new Language($functions->getActionLanguage($_GET['action']), $functions);
-	else
+	else:
 		$language = new Language('', $functions);
+	endif;
 
 	define('LANG', $language->activeLanguage);
 
-	$internalizationPath = BASEPATH . '/includes/internalization/' . LANG . '/';
+	$internalisationPath = BASEPATH . '/includes/internalisation/' . LANG . '/';
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo LANG === 'gr' ? 'el' : 'en' ?>">
 <?php require_once(BASEPATH . "/includes/head.php"); ?>
 <body>
 	<div id="wrapper" class="col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
-<?php require_once($internalizationPath . "header.php"); ?>
+<?php require_once($internalisationPath . "header.php"); ?>
 		<main id="main" class="<?php echo ACTION ?>">
 			<aside id="sibebar" class="hidden-xs hidden-sm col-md-3 col-lg-3">
-<?php require_once($internalizationPath . "sidebar.php"); ?>
+<?php require_once($internalisationPath . "sidebar.php"); ?>
 
 				<div id="fb-root"></div>
 				<script type="text/javascript">
@@ -44,14 +45,14 @@
 				</script>
 			</aside>
 			<div id="content" class="col-xm-12 col-sm-12 col-md-9 col-lg-9">
-<?php require_once($internalizationPath . FILE); ?>
+<?php require_once($internalisationPath . FILE); ?>
 			</div>
 		</main>
 	</div>
 <?php
 	if (in_array(ACTION, ['services', 'articles'], TRUE))
 			require_once(BASEPATH . '/includes/image-modal.php');
-	require_once($internalizationPath . "footer.php");
+	require_once($internalisationPath . "footer.php");
 ?>
 </body>
 </html>

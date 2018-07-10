@@ -4,6 +4,9 @@
 /src/images/*
 /src/downloads/*
 
+# VSCode Settings
+/.vscode/
+
 # Dont ignore this file
 !.gitignore
 
