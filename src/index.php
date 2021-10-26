@@ -25,11 +25,11 @@
 <html lang="<?php echo LANG === 'gr' ? 'el' : 'en' ?>">
 <?php require_once(BASEPATH . "/includes/head.php"); ?>
 <body>
-	<div id="wrapper" class="col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
+	<div id="wrapper" class="container-custom">
 <?php require_once($internalisationPath . "header.php"); ?>
-		<main id="main" class="<?php echo ACTION ?>">
-			<aside id="sibebar" class="hidden-xs hidden-sm col-md-3 col-lg-3">
-<?php require_once($internalisationPath . "sidebar.php"); ?>
+		<main id="main" class="row <?php echo ACTION ?>">
+			<!-- <aside id="sibebar" class="hidden-xs hidden-sm col-md-3 col-lg-3">
+			<?php //require_once($internalisationPath . "sidebar.php"); ?>
 
 				<div id="fb-root"></div>
 				<script type="text/javascript">
@@ -43,8 +43,8 @@
 					}(document, 'script', 'facebook-jssdk'));
 				}
 				</script>
-			</aside>
-			<div id="content" class="col-xm-12 col-sm-12 col-md-9 col-lg-9">
+			</aside> -->
+			<div id="content" class="col-xm-12 col-sm-12 col-md-12">
 <?php require_once($internalisationPath . FILE); ?>
 			</div>
 		</main>
@@ -52,7 +52,11 @@
 <?php
 	if (in_array(ACTION, ['services', 'articles'], TRUE))
 			require_once(BASEPATH . '/includes/image-modal.php');
-	require_once($internalisationPath . "footer.php");
-?>
+	?>
+	<footer class="container-custom">
+		<div class="row">
+			<?php require_once($internalisationPath . "footer.php"); ?>
+		</div>
+	</footer>
 </body>
 </html>

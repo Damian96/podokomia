@@ -1,11 +1,9 @@
-	<footer>
-		<div id="developer-link" class="col-sm-12 col-md-4 col-lg-4">
-			&copy; Copyright 2015 - 2017 <a href="http://dgiankakis.it-studies.gr" title="Damianos Giankakis">Damianos Giankakis</a>
-		</div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-			Βασίλης Ζαφειράκης
-		</div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-			Κτηνίατρος Παραγωγικών Ζώων
-		</div>
-	</footer>
+	<div id="developer-link" class="col-sm-12 col-md-4 col-lg-4">
+		&copy; Copyright <?php echo date("Y"); ?> Podokomia 
+	</div>
+	<div class="col-sm-12 col-md-4 col-lg-4">
+		Βασίλης Ζαφειράκης - Κτηνίατρος Παραγωγικών Ζώων
+	</div>
+	<div class="col-sm-12 col-md-4 col-lg-4">
+		Powered by <a href="https://github.com/Damian96" target="_blank">Damianos Giankakis</a>
+	</div>

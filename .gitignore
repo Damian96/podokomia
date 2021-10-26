@@ -1,8 +1,6 @@
 # Custom Ignore Rules
 /assets
 /build
-/src/images/*
-/src/downloads/*
 
 # VSCode Settings
 /.vscode/
